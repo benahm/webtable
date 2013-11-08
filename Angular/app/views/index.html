@@ -6,9 +6,7 @@
 </head>
 <body>
 
-    <div id="webtable" ng-controller="TableController">
-        <input type="text"  ng-model="message" />
-        {{ message }}
+    <div id="webtable" ng-controller="tableController">
         <div class="btn-group">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
                 Menu <span class="caret"></span>
@@ -46,7 +44,7 @@
                 </tr>
                 <tr ng-show="new_record" class="success">
                     <td>*</td>
-                    <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
+                    <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index" >
                         <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
                     </td>
                 </tr>
@@ -58,18 +56,32 @@
                 </tr>
             </tbody>
         </table>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
 
        </div>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 <script src="../scripts/directives/directives.js"></script>
+<script src="../scripts/filters/filters.js"></script>
+<script src="../scripts/controllers/tableContorller.js"></script>
+<script src="../scripts/controllers/pageController.js"></script>
 <script src="../scripts/app.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 <script>
 
     $(document).ready(function(){
-
+        var tdWidth = 100/($("#webtable").scope().datas.head.length+1)+"%";
+        $(this).find('style').append(".table.fixedWidth >tbody>tr>td{padding: 0; width:"+tdWidth+";}");
+        $('body').find('.table').each(function(){$(this).addClass('fixedWidth')});
     });
 </script>
 
@@ -81,11 +93,17 @@
         -webkit-box-sizing:border-box;
         -moz-box-sizing: border-box;
     }
-
-    .cell{
-        width:150px;
-        height: 20px;;
+    .table>tbody>tr>td{
+        padding: 0;
+        width: auto;
     }
+
+    .table>tbody>tr>td>*{
+        width: 100%;
+        padding-left: 5px;
+    }
+
+
 
 </style>
 </html>
