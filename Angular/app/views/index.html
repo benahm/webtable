@@ -22,6 +22,7 @@
                 <li><a href="#" ng-click="saveRecord()">Save Record</a></li>
                 <li class="divider"></li>
                 <li><a href="#" ng-click="queryRecord()">New query</a></li>
+                <li><a href="#" ng-click="queryRecord()">Refine query</a></li>
                 <li class="divider"></li>
                 <li><a href="#" ng-click="">About record</a></li>
                 <li><a href="#" ng-click="">Count records</a></li>
@@ -32,7 +33,7 @@
         <button class="btn" ng-click="saveRecord()" ng-hide="!show_new_record">Save</button>
         <button class="btn" ng-click="queryRecord()" ng-hide="show_query_record || show_new_record">Query</button>
         <button class="btn" ng-click="clearQueryRecord()" ng-show="query_record">Clear</button>
-        <table class="table table-striped">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr><th>#</th><th ng-repeat="headElement in datas.head"> {{headElement}}</th></tr>
             </thead>
@@ -49,9 +50,9 @@
                         <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
                     </td>
                 </tr>
-                <tr ng-repeat="(outerindex,data) in datas.body" >
-                    <td >{{selectedRecord(outerindex)?'*':'-'}}{{outerindex}}</td>
-                    <td ng-repeat="d in data | queryRecord:query_record track by $index " ng-init="innerindex=$index">
+                <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record" >
+                    <td>{{selectedRecord(outerindex)?'*':'-'}}</td>
+                    <td ng-repeat="d in data track by $index " ng-init="innerindex=$index">
                         <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex" maxouterindex="datas.head.length"></div>
                     </td>
                 </tr>

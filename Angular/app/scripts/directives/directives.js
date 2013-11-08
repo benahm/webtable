@@ -29,18 +29,7 @@ directivesModule.directive('doFocus', function($timeout) {
             });
         }
     };
-}).filter('queryRecord', function() {
-        return function(row,query_record) {
-            if(!query_record)return row;
-            var i;
-            for(i=0;i<row.length; i++){
-                if((row[i].value+"").toLowerCase().indexOf(query_record[i].value.toLowerCase())==-1) break;
-            }
-            if(i==row.length)
-                return row;
-        }
-    }).directive("ngCell",function(){
-
+}).directive("ngCell",function(){
     }).directive('ngClickOutside', function($document){
         return {
             restrict: 'A',
