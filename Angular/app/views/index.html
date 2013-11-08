@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div id="webtable" ng-controller="TableController">
+        <input type="text"  ng-model="message" />
+        {{ message }}
+        <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                Menu <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" ng-click="">Cancel record</a></li>
+                <li><a href="#" ng-click="">Delete record</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="newRecord()">New record</a></li>
+                <li><a href="#" ng-click="">Copy record</a></li>
+                <li><a href="#" ng-click="saveRecord()">Save Record</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="queryRecord()">New query</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="">About record</a></li>
+                <li><a href="#" ng-click="">Count records</a></li>
+            </ul>
+        </div>
+        <button class="btn" ng-click="newRecord()" ng-hide="show_query_record || show_new_record">New</button>
+        <button class="btn" ng-click="cancelRecord()" ng-hide="!show_new_record">Cancel</button>
+        <button class="btn" ng-click="saveRecord()" ng-hide="!show_new_record">Save</button>
+        <button class="btn" ng-click="queryRecord()" ng-hide="show_query_record || show_new_record">Query</button>
+        <button class="btn" ng-click="clearQueryRecord()" ng-show="query_record">Clear</button>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>#</th><th ng-repeat="headElement in datas.head"> {{headElement}}</th></tr>
+            </thead>
+            <tbody>
+                <tr ng-show="show_query_record" class="success">
+                    <td>*</td>
+                    <td ng-repeat="r in query_record track by $index" ng-init="innerindex=$index" >
+                        <div class="cell"  tabindex="{{innerindex+1}}" ng-show="!r.focused && !r.value" ng-focus="r.focused=true"  > *Enter query* </div>
+                        <div class="cell" tabindex="0" ng-show="!r.focused && r.value" ng-focus="r.focused=true"> {{ r.value }} </div>
+                        <input  tabindex="{{innerindex+1}}" type="text" ng-show="r.focused" ng-model="r.value" ng-blur="r.focused=false"  do-focus="r.focused" placeholder="*Enter query*">
+                    </td>
+
+                </tr>
+                <tr ng-show="new_record" class="success">
+                    <td>*</td>
+                    <td ng-repeat="r in new_record track by $index" ng-init="innerindex=$index">
+                        <div class="cell" tabindex="{{innerindex+1}}" ng-show="!r.focused && !r.value" ng-focus="r.focused=true"  > *Enter query* </div>
+                        <div class="cell" tabindex="0" ng-show="!r.focused && r.value" ng-focus="r.focused=true"> {{ r.value }} </div>
+                        <input  tabindex="{{innerindex+1}}" type="text" ng-show="r.focused" ng-model="r.value" ng-blur="r.focused=false"  do-focus="r.focused" placeholder="*Enter query*">
+                    </td>
+                </tr>
+                <tr ng-repeat="data in datas.body" ng-init="outerindex=$index">
+                    <td>{{selectedRecord(outerindex)?'*':'-'}}</td>
+                    <td ng-repeat="d in data | queryRecord:query_record track by $index " ng-init="innerindex=$index">
+                        <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex" maxouterindex="datas.head.length"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+       </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+<script src="../scripts/directives/directives.js"></script>
+<script src="../scripts/app.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+
+    });
+</script>
+
+<style>
+
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .cell{
+        width:150px;
+        height: 20px;;
+    }
+
+</style>
+</html>
