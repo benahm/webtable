@@ -10,15 +10,14 @@ directivesModule.directive('doFocus', function($timeout) {
                 if(value === true) {
                     element[0].focus();
                     //scope.query_record.focused=true;
-
+                    var tablescope=$("#webtable").scope();
                     if(!scope.nq){
-                        $("#webtable").scope().show_query_record=false;
+                        tablescope.show_query_record=false;
                     }
                     if(scope.outerindex!=undefined){
-                        $("#webtable").scope().selectedRecordValue=scope.outerindex;
-                    } console.log(scope.nq,$("#webtable").scope())
+                        tablescope.selectedRecordValue=scope.outerindex;
+                    }
                     if(!scope.nq){
-                        var tablescope=$("#webtable").scope();
                         if(tablescope.new_record){
                             tablescope.datas.body.unshift(tablescope.new_record);
                             tablescope.new_record=undefined;

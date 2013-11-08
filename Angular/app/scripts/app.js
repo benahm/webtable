@@ -45,12 +45,21 @@ myModule.controller("TableController",function($scope){
         $scope.show_new_record=false;
     }
 
+    $scope.deleteRecord=function(){
+
+    }
+
     $scope.queryRecord=function(){
         var record=[];
         for(var val in $scope.datas.head){
             record.push({value:""});
         }
         $scope.query_record=record;
+        $scope.show_query_record=true;
+        $scope.selectedRecordValue=-1;
+    };
+
+    $scope.refineQueryRecord=function(){
         $scope.show_query_record=true;
         $scope.selectedRecordValue=-1;
     };
@@ -64,13 +73,26 @@ myModule.controller("TableController",function($scope){
             if(index===undefined)return false;
             return ($scope.selectedRecordValue===index);
     };
-    $scope.unfocused=function(){
-        var b=false;
-        for(var i=0;i< $scope.query_record.length;i++){
-            b=b || $scope.query_record[i].focused;
+
+    $scope.sort=function(headElement){
+        console.log("hi")
+        $scope.datas.body.pop();
+    };
+
+    $scope.columnNum=-1;
+    $scope.reverseSort=false;
+    $scope.setSelectedColumn=function(i){
+        if($scope.columnNum===i)
+            $scope.reverseSort=!$scope.reverseSort;
+        else{
+            $scope.columnNum=i;
+            $scope.reverseSort=false;
         }
-        if(b==undefined)b=false;
-        return b;
+    };
+    $scope.selectedColumn=function(data){
+        if($scope.columnNum>=0)
+            return data[$scope.columnNum].value;
+        else return 0;
     };
 
 }).filter('queryRecord', function() {
