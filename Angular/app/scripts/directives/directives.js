@@ -23,6 +23,7 @@ directivesModule.directive('doFocus', function($timeout) {
                         if(tablescope.new_record){
                             tablescope.datas.body.unshift(tablescope.new_record);
                             tablescope.new_record=undefined;
+                            tablescope.show_new_record=false;
                         }
                     }
                 }
@@ -51,15 +52,25 @@ directivesModule.directive('doFocus', function($timeout) {
             }
         }
     }).directive('webtableCell', function() {
-    return {
-        restrict: 'AE',
-        templateUrl: 'webtable-cell.html',
-        scope:{
-            d:"=datacell",
-            innerindex:"=",
-            outerindex:"=",
-            maxouterindex:"="
-        },
-        replace: true
-    };
-});
+        return {
+            restrict: 'AE',
+            templateUrl: 'webtable-cell.html',
+            scope:{
+                d:"=datacell",
+                innerindex:"=",
+                outerindex:"=",
+                maxouterindex:"="
+            },
+            replace: true
+        };
+    }).directive('webtableCellNq', function() {
+        return {
+            restrict: 'AE',
+            templateUrl: 'webtable-cell-nq.html',
+            scope:{
+                d:"=datacell",
+                index:"="
+            },
+            replace: true
+        };
+    });

@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div>
+    <div class="cell" tabindex="{{index+1}}" ng-show="!d.focused && !d.value" ng-focus="d.focused=true"  > *Enter query* </div>
+    <div class="cell" tabindex="0" ng-show="!d.focused && d.value" ng-focus="d.focused=true"> {{ d.value }} </div>
+    <input  tabindex="{{index+1}}" type="text" ng-show="d.focused" ng-model="d.value" ng-blur="d.focused=false"  do-focus="d.focused" placeholder="*Enter query*">
+</div>
