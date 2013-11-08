@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="64" selection-start="2699" selection-end="2699" vertical-scroll-proportion="0.53125" vertical-offset="578" max-vertical-offset="1615">
+            <state line="42" column="94" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-9.153846" vertical-offset="476" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
@@ -35,16 +35,16 @@
       <file leaf-file-name="webtable-cell-nq.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/webtable-cell-nq.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="418" selection-end="418" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+            <state line="2" column="98" selection-start="232" selection-end="232" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="61" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="1377">
+            <state line="13" column="32" selection-start="447" selection-end="447" vertical-scroll-proportion="0.37907377" vertical-offset="0" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="webtable-cell.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="9" selection-start="15" selection-end="27" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="238">
+            <state line="8" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="54" selection-start="280" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1394">
+            <state line="63" column="0" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -78,11 +78,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/webtable-cell.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/webtable-cell-nq.html" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/views/webtable-cell.html" />
         <option value="$PROJECT_DIR$/app/views/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
       </list>
     </option>
   </component>
@@ -384,37 +384,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="15" selection-end="27" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="238">
+        <state line="8" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/webtable-cell-nq.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="418" selection-end="418" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="61" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="1377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="54" selection-start="280" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1394">
+        <state line="2" column="98" selection-start="232" selection-end="232" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="64" selection-start="2699" selection-end="2699" vertical-scroll-proportion="0.53125" vertical-offset="578" max-vertical-offset="1615">
+        <state line="42" column="94" selection-start="2277" selection-end="2277" vertical-scroll-proportion="-9.153846" vertical-offset="476" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="447" selection-end="447" vertical-scroll-proportion="0.37907377" vertical-offset="0" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>

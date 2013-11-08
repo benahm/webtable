@@ -40,13 +40,13 @@
                 <tr ng-show="show_query_record" class="success">
                     <td>*</td>
                     <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index" >
-                        <div webtable-cell-nq datacell="d" index="innerindex"></div>
+                        <div webtable-cell-nq datacell="d" index="innerindex" nq="query_record"></div>
                     </td>
                 </tr>
                 <tr ng-show="new_record" class="success">
                     <td>*</td>
                     <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
-                        <div webtable-cell-nq datacell="d" index="innerindex"></div>
+                        <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
                     </td>
                 </tr>
                 <tr ng-repeat="(outerindex,data) in datas.body" >

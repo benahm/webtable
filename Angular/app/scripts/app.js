@@ -61,7 +61,6 @@ myModule.controller("TableController",function($scope){
     };
 
     $scope.selectedRecord=function(index){
-        console.log($scope.selectedRecordValue,index)
             if(index===undefined)return false;
             return ($scope.selectedRecordValue===index);
     };

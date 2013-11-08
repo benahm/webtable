@@ -10,15 +10,14 @@ directivesModule.directive('doFocus', function($timeout) {
                 if(value === true) {
                     element[0].focus();
                     //scope.query_record.focused=true;
-                    console.log("query",$("#webtable").scope().show_query_record)
 
-                    if(!scope.show_query_record){
+                    if(!scope.nq){
                         $("#webtable").scope().show_query_record=false;
                     }
                     if(scope.outerindex!=undefined){
                         $("#webtable").scope().selectedRecordValue=scope.outerindex;
-                    }
-                    if(!scope.new_record){
+                    } console.log(scope.nq,$("#webtable").scope())
+                    if(!scope.nq){
                         var tablescope=$("#webtable").scope();
                         if(tablescope.new_record){
                             tablescope.datas.body.unshift(tablescope.new_record);
@@ -69,7 +68,8 @@ directivesModule.directive('doFocus', function($timeout) {
             templateUrl: 'webtable-cell-nq.html',
             scope:{
                 d:"=datacell",
-                index:"="
+                index:"=",
+                nq:"@"
             },
             replace: true
         };
