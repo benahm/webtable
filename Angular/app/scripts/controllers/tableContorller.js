@@ -5,6 +5,10 @@ var tableController=angular.module("tableController",[]);
 tableController.controller("tableController",function($scope){
     $scope.message="hello,world"
     $scope.datas={
+        info:{
+            pgNum:6,
+            pgTotal:7
+        },
         head:["name","age","gender"],
         body:[
             [{value:'John'},{value:25}, {value:'boy'}],
@@ -18,71 +22,15 @@ tableController.controller("tableController",function($scope){
             [{value:'Patrick'},{value: 40}, {value:'boy'}],
             [{value:'Samantha'},{value: 60},{value: 'girl'}]
         ]}
-    $scope.focus=function(){
 
-    };
+    /**
+     * Sort and selection
+     *
+     */
 
-    /* New Record */
-    $scope.newRecord=function(){
-        var record=[];
-        for(var val in $scope.datas.head){
-            record.push({value:""});
-        }
-        $scope.new_record=record;
-        $scope.show_new_record=true;
-        $scope.selectedRecordValue=-1;
-    };
-
-    /* Cancel Record */
-    $scope.cancelRecord=function(){
-        $scope.new_record=undefined;
-        $scope.show_new_record=false;
+    $scope.setSelectedRecord=function(index){
+        $scope.selectedRecordValue=index;
     }
-
-    /* Save Record */
-    $scope.saveRecord=function(){
-        $scope.datas.body.unshift($scope.new_record);
-        $scope.new_record=undefined;
-        $scope.show_new_record=false;
-    }
-
-    /* Copy Record */
-    $scope.copyRecord=function(){
-        if($scope.selectedRecordValue!==-1){
-            var record=$scope.datas.body[$scope.selectedRecordValue];
-            var copyOfRecord=(JSON.parse(JSON.stringify(record)));
-            $scope.datas.body.splice($scope.selectedRecordValue,0,copyOfRecord);
-        }
-    }
-
-    /* Delete Record */
-    $scope.deleteRecord=function(){
-        if($scope.selectedRecordValue!==-1)
-            $scope.datas.body.splice($scope.selectedRecordValue,1);
-    }
-
-    /* Query Record */
-    $scope.queryRecord=function(){
-        var record=[];
-        for(var val in $scope.datas.head){
-            record.push({value:""});
-        }
-        $scope.query_record=record;
-        $scope.show_query_record=true;
-        $scope.selectedRecordValue=-1;
-    };
-
-    /* Refine Query Record */
-    $scope.refineQueryRecord=function(){
-        $scope.show_query_record=true;
-        $scope.selectedRecordValue=-1;
-    };
-
-    /* Clear Query Record */
-    $scope.clearQueryRecord=function(){
-        $scope.query_record=undefined;
-        $scope.show_query_record=false;
-    };
 
     $scope.selectedRecord=function(index){
         if(index===undefined)return false;
@@ -90,7 +38,6 @@ tableController.controller("tableController",function($scope){
     };
 
     $scope.sort=function(headElement){
-        console.log("hi")
         $scope.datas.body.pop();
     };
 
@@ -104,10 +51,28 @@ tableController.controller("tableController",function($scope){
             $scope.reverseSort=false;
         }
     };
+
     $scope.selectedColumn=function(data){
         if($scope.columnNum>=0)
             return data[$scope.columnNum].value;
-        else return 0;
+        else return $scope.datas.body.indexOf(data);
     };
+
+    /**
+     * Pages
+     */
+
+    $scope.pageRange=function(){
+        var lowerBound,upperBound;
+        if($scope.datas.info.pgNum>3){
+
+        }
+    }
+
+    $scope.makeArray = function(num) {
+        return new Array(num);
+    }
+
+    $scope.decalePage=($scope.datas.info.pgNum-3)<0?0:($scope.datas.info.pgNum-3);
 
 });
