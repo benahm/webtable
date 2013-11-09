@@ -1,0 +1,5 @@
+<div>
+    <div class="cell" tabindex="{{index+1}}" ng-show="!focused && !d.value" ng-focus="focused=true"  > &lt;&lt;Enter value here.&gt;&gt; </div>
+    <div class="cell" tabindex="0" ng-show="!focused && d.value" ng-focus="focused=true"> {{ d.value }} </div>
+    <input  tabindex="{{index+1}}" type="text" ng-show="focused" ng-model="d.value" ng-blur="focused=false"  do-focus="focused" placeholder="&lt;&lt;Enter value here&gt;&gt;">
+</div>

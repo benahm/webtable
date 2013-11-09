@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<input id="input" type="text">
+<button>click</button>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="../scripts/services/parser.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").on("click",function(){
+            var p=parser();
+            var val=$("#input").val();
+            var scope={
+                val:10,
+                identifiers:{name:10,g:"s"}
+            }
+            console.log(p.parseCondition(scope,val));
+        });
+    })
+</script>
+</html>
