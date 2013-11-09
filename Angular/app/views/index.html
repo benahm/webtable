@@ -5,18 +5,17 @@
     <title></title>
 </head>
 <body>
-
     <div id="webtable" ng-controller="tableController">
         <div class="btn-group">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
                 Menu <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#" ng-click="">Cancel record</a></li>
-                <li><a href="#" ng-click="">Delete record</a></li>
+                <li><a href="#" ng-click="cancelRecord()">Cancel record</a></li>
+                <li><a href="#" ng-click="deleteRecord()">Delete record</a></li>
                 <li class="divider"></li>
                 <li><a href="#" ng-click="newRecord()">New record</a></li>
-                <li><a href="#" ng-click="">Copy record</a></li>
+                <li><a href="#" ng-click="copyRecord()">Copy record</a></li>
                 <li><a href="#" ng-click="saveRecord()">Save Record</a></li>
                 <li class="divider"></li>
                 <li><a href="#" ng-click="queryRecord()">New query</a></li>
@@ -79,9 +78,9 @@
 <script>
 
     $(document).ready(function(){
-        var tdWidth = 100/($("#webtable").scope().datas.head.length+1)+"%";
+       /* var tdWidth = 100/($("#webtable").scope().datas.head.length+1)+"%";
         $(this).find('style').append(".table.fixedWidth >tbody>tr>td{padding: 0; width:"+tdWidth+";}");
-        $('body').find('.table').each(function(){$(this).addClass('fixedWidth')});
+        $('body').find('.table').each(function(){$(this).addClass('fixedWidth')});*/
     });
 </script>
 

@@ -26,17 +26,39 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="30" selection-start="3993" selection-end="3993" vertical-scroll-proportion="0.375" vertical-offset="1071" max-vertical-offset="1938">
+            <state line="80" column="77" selection-start="4321" selection-end="4321" vertical-scroll-proportion="0.6634799" vertical-offset="1013" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webtable-cell-nq.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/webtable-cell-nq.html">
+      <file leaf-file-name="boolParser.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/boolParser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="443" selection-end="443" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+            <state line="11" column="6" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3961">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/parser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="41" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="41" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+                <marker date="1383935867447" expanded="true" signature="139:333" placeholder="{...}" />
+                <marker date="1383935867447" expanded="true" signature="312:324" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +104,7 @@
       <file leaf-file-name="tableContorller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="62" selection-start="43" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+            <state line="80" column="18" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1972">
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -118,6 +140,10 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/menuContorller.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pageController.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/router.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
+        <option value="$PROJECT_DIR$/app/views/parser.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/boolParser.js" />
         <option value="$PROJECT_DIR$/app/views/index.html" />
       </list>
     </option>
@@ -210,6 +236,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,20 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="30" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/webtable-cell-nq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="46" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1190">
@@ -479,15 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="62" selection-start="43" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
@@ -497,9 +522,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="41" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1383935867447" expanded="true" signature="139:333" placeholder="{...}" />
+            <marker date="1383935867447" expanded="true" signature="312:324" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="18" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1972">
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="41" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/boolParser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="30" selection-start="3993" selection-end="3993" vertical-scroll-proportion="0.375" vertical-offset="1071" max-vertical-offset="1938">
+        <state line="80" column="77" selection-start="4321" selection-end="4321" vertical-scroll-proportion="0.6634799" vertical-offset="1013" max-vertical-offset="1921">
           <folding />
         </state>
       </provider>

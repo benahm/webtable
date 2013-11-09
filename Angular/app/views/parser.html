@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<input id="input" type="text">
+<button>click</button>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="../scripts/services/boolParser.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").on("click",function(){
+            var p=parser();
+            var val=$("#input").val();
+            console.log(p.parseCondition(val));
+        });
+    })
+</script>
+</html>
