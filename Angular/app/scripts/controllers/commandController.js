@@ -43,8 +43,12 @@ commandController.controller("commandController",function($scope){
 
     /* Delete Record */
     $scope.deleteRecord=function(){
-        if($scope.selectedRecordValue!==-1)
-            tablescope.datas.body.splice($scope.selectedRecordValue,1);
+        var index=$scope.selectedRecordValue;
+        if(index!==-1){
+            if(index>0)
+                tablescope.selectedRecordValue--;
+            tablescope.datas.body.splice(index,1);
+        }
     }
 
     /* Query Record */

@@ -5,6 +5,20 @@
     <title></title>
 </head>
 <body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">webtable</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-4">
+        <p class="navbar-text">alpha version 0.0.0.1</p>
+    </div>
+</nav>
 <div id="webtable" ng-controller="tableController">
     <div class="commands" ng-controller="commandController">
         <div class="btn-group">
@@ -38,7 +52,11 @@
         <thead>
         <tr>
             <th>#</th>
-            <th ng-repeat="headElement in datas.head" ng-click="setSelectedColumn($index)"> {{headElement}}</th>
+            <th ng-repeat="headElement in datas.head" ng-click="setSelectedColumn($index)">
+                    <i class="glyphicon glyphicon-sort" ng-hide="columnNum==$index"></i>
+                    <i class="glyphicon glyphicon-chevron-up pull-up" ng-show="!reverseSort&&columnNum==$index"></i>
+                    <i class="glyphicon glyphicon-chevron-down " ng-show="reverseSort&&columnNum==$index"></i>
+                {{headElement}}</th>
         </tr>
         </thead>
         <tbody>
@@ -54,7 +72,7 @@
                 <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
             </td>
         </tr>
-        <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort">
+        <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort" ng-class="activeRecord(outerindex)">
             <td ng-click="setSelectedRecord(outerindex)">{{selectedRecord(outerindex)?'*':'-'}}</td>
             <td ng-repeat="d in data track by $index " ng-init="innerindex=$index"  style="width: {{100/datas.head.length}}%" >
                 <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex"
@@ -65,18 +83,22 @@
     </table>
 
 
-    <ul class="pagination"  >
+    <ul class="pagination" ng-hide="true" >
         <li><a href="#">&laquo;</a></li>
         <li ng-repeat="i in makeArray(decalePage+datas.info.pgTotal-datas.info.pgNum) track by $index">
             <a href="#" ng-click="getPage($index)">{{$index+decalePage}}</a>
         </li>
         <li><a href="#">&raquo;</a></li>
     </ul>
+</div>
 
-
+<div id="footer">
+    <div class="container">
+        <p class="text-muted credit">Licence Apache 2.0</p>
+    </div>
 </div>
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 <script src="../scripts/services/parser.js"></script>
 <script src="../scripts/directives/directives.js"></script>
@@ -98,12 +120,22 @@
 
     input[type="text"] {
         width: 100%;
+        text-align: center;
     }
     .table > tbody > tr > td {
         padding: 0;
+        text-align: center;
+    }
+    .table > thead > tr > th {
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .cell{
         height: 25px;
+        text-align: center;
     }
 
 </style>
