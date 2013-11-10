@@ -1,9 +1,9 @@
 /**
- * Created by Bensaad on 09/11/13.
+ * Created by Ahmed on 09/11/13.
  */
 
-var commandController = angular.module("commandController", []);
-commandController.controller("commandController", function ($scope) {
+var commandController = angular.module("commandController", ["constraint"]);
+commandController.controller("commandController", function ($scope,constraintFactory) {
     /**
      * Commands
      */
@@ -12,7 +12,7 @@ commandController.controller("commandController", function ($scope) {
     $scope.newRecord = function () {
         var record = [];
         for (var val in $scope.datas.head) {
-            record.push({value: ""});
+            record.push("");
         }
         tablescope.new_record = record;
         tablescope.show_new_record = true;
@@ -27,9 +27,12 @@ commandController.controller("commandController", function ($scope) {
 
     /* Save Record */
     $scope.saveRecord = function () {
-        tablescope.datas.body.unshift($scope.new_record);
-        tablescope.new_record = undefined;
-        tablescope.show_new_record = false;
+        var check= constraintFactory.checkAll($scope.new_record,$scope.datas.head)
+        if(!check){
+            tablescope.datas.body.unshift($scope.new_record);
+            tablescope.new_record = undefined;
+            tablescope.show_new_record = false;
+        }else $scope.modal.displayMessages(check);
     }
 
     /* Copy Record */
@@ -39,7 +42,7 @@ commandController.controller("commandController", function ($scope) {
             var record = $scope.datas.body[$scope.selectedRecordValue];
             var copyOfRecord = (JSON.parse(JSON.stringify(record)));
             tablescope.datas.body.splice($scope.selectedRecordValue, 0, copyOfRecord);
-        } else $scope.modal.open("No record selected!");
+        } else $scope.modal.display("No record selected!");
     }
 
     /* Delete Record */
@@ -49,14 +52,14 @@ commandController.controller("commandController", function ($scope) {
             if (index > 0)
                 tablescope.selectedRecordValue--;
             tablescope.datas.body.splice(index, 1);
-        } else $scope.modal.open("No record selected!");
+        } else $scope.modal.display("No record selected!");
     }
 
     /* Query Record */
     $scope.queryRecord = function () {
         var record = [];
         for (var val in $scope.datas.head) {
-            record.push({value: ""});
+            record.push("");
         }
         tablescope.query_record = record;
         tablescope.show_query_record = true;
@@ -84,14 +87,14 @@ commandController.controller("commandController", function ($scope) {
         var index=$scope.selectedRecordValue;
         if(index!=-1){
             var changed=$scope.datas.body[index].changed;
-            $scope.modal.open(changed?"The record has been modified.":"The record has not been modified yet.");
-        } else $scope.modal.open("No record selected!");
+            $scope.modal.display(changed?"The record has been modified.":"The record has not been modified yet.");
+        } else $scope.modal.display("No record selected!");
     }
 
     /* Count Records */
     $scope.countRecords=function(){
         var count=$scope.datas.body.length;
-        $scope.modal.open("Total: "+count+" records.");
+        $scope.modal.display("Total: "+count+" records.");
     }
 
 
@@ -126,14 +129,24 @@ commandController.controller("commandController", function ($scope) {
     }
 
 
+
     /* modal management */
     $scope.modal = {
         isVisible: "hide",
         message: "",
-        open: function (message, callback) {
+        display: function (message, callback) {
             if(typeof callback === "function")
                 $scope.modal.ok = callback;
             $scope.modal.message = message;
+            $scope.modal.isVisible = "show";
+        },
+        displayMessages:function(data, callback){
+            if(typeof callback === "function")
+                $scope.modal.ok = callback;
+            $scope.modal.data={
+                nameColumn:$scope.datas.head[data.index].name,
+                messages:data.messages
+            }
             $scope.modal.isVisible = "show";
         },
         close: function () {

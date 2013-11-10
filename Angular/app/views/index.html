@@ -57,6 +57,15 @@
                     </div>
                     <div class="modal-body">
                         {{modal.message}}
+                        <div ng-if="modal.data">
+                            [{{modal.data.nameColumn}}]
+                            <br/>
+                            <ul>
+                                <li ng-repeat="message in modal.data.messages">
+                                    {{message}}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" data-dismiss="modal" ng-click="modal.close()">Close</button>
@@ -71,11 +80,11 @@
         <thead>
         <tr>
             <th>#</th>
-            <th ng-repeat="headElement in datas.head" ng-click="setSelectedColumn($index)">
+            <th ng-repeat="element in datas.head" ng-click="setSelectedColumn($index)">
                     <i class="glyphicon glyphicon-sort" ng-hide="columnNum==$index"></i>
                     <i class="glyphicon glyphicon-chevron-up pull-up" ng-show="!reverseSort&&columnNum==$index"></i>
                     <i class="glyphicon glyphicon-chevron-down " ng-show="reverseSort&&columnNum==$index"></i>
-                {{headElement}}</th>
+                {{element.name}}</th>
         </tr>
         </thead>
         <tbody>
@@ -120,6 +129,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 <script src="../scripts/services/dataFactory.js"></script>
+<script src="../scripts/services/constraintFactory.js"></script>
 <script src="../scripts/services/parser.js"></script>
 <script src="../scripts/directives/directives.js"></script>
 <script src="../scripts/filters/filters.js"></script>

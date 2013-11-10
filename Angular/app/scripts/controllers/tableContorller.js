@@ -1,5 +1,5 @@
 /**
- * Created by Bensaad on 08/11/13.
+ * Created by Ahmed on 08/11/13.
  */
 var tableController=angular.module("tableController",["data"]);
 tableController.controller("tableController",function($scope,$http,dataFactory){
@@ -9,6 +9,7 @@ tableController.controller("tableController",function($scope,$http,dataFactory){
      dataFactory.getData("../json/test.json").success(function(data){
         $scope.datas=data;
     })
+
     /**
      * Sort and selection
      *
@@ -28,10 +29,6 @@ tableController.controller("tableController",function($scope,$http,dataFactory){
         return ($scope.selectedRecordValue===index);
     };
 
-    $scope.sort=function(headElement){
-        $scope.datas.body.pop();
-    };
-
     $scope.columnNum=-1;
     $scope.reverseSort=false;
     $scope.setSelectedColumn=function(i){
@@ -45,7 +42,7 @@ tableController.controller("tableController",function($scope,$http,dataFactory){
 
     $scope.selectedColumn=function(data){
         if($scope.columnNum>=0)
-            return data[$scope.columnNum].value;
+            return data[$scope.columnNum];
         else return $scope.datas.body.indexOf(data);
     };
 

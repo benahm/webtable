@@ -3,178 +3,139 @@
         "pgNum": 6,
         "pgTotal": 7
     },
-    "head": ["name", "age", "gender"],
+    "head": [
+        {
+            "name": "name",
+            "constraints": {
+                "required":"Name is required"
+            }
+        },
+        {
+            "name": "age",
+            "constraints": {}
+        },
+        {
+            "name": "gender",
+            "constraints": {}
+        }
+    ],
     "body": [
         [
-            {
-                "value": "John"
-            },
-            {
-                "value": 25
-            },
-            {
-                "value": "boy"
-            }
-        ],
-        [
-            {
-                "value": "Jessie"
-            },
-            {
-                "value": 30
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Johanna"
-            },
-            {
-                "value": 28
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Joy"
-            },
-            {
-                "value": 15
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Mary"
-            },
-            {
-                "value": 28
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Peter"
-            },
-            {
-                "value": 95
-            },
-            {
-                "value": "boy"
-            }
-        ],
-        [
-            {
-                "value": "Sebastian"
-            },
-            {
-                "value": 50
-            },
-            {
-                "value": "boy"
-            }
-        ],
-        [
-            {
-                "value": "Erika"
-            },
-            {
-                "value": 27
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Patrick"
-            },
-            {
-                "value": 40
-            },
-            {
-                "value": "boy"
-            }
-        ],
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ]
-        ,
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ]
-        ,
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ]
-        ,
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ]
-        ,
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ],
-        [
-            {
-                "value": "Samantha"
-            },
-            {
-                "value": 60
-            },
-            {
-                "value": "girl"
-            }
-        ]
+            "John"
+            ,
+            25
+            ,
 
+            "boy"
+
+        ],
+        [
+
+            "Jessie"
+            ,
+
+            30
+            ,
+
+            "girl"
+
+        ],
+        [
+
+            "Johanna"
+            ,
+
+            28
+            ,
+
+            "girl"
+
+        ],
+        [
+
+            "Joy"
+            ,
+
+            15
+            ,
+
+            "girl"
+
+        ],
+        [
+
+            "Mary"
+            ,
+
+            28
+            ,
+
+            "girl"
+
+        ],
+        [
+
+            "Peter"
+            ,
+
+            95
+            ,
+
+            "boy"
+
+        ],
+        [
+
+            "Sebastian"
+            ,
+
+            50
+            ,
+
+            "boy"
+
+        ],
+        [
+
+            "Erika"
+            ,
+
+            27
+            ,
+            "girl"
+        ],
+        [
+            "Patrick"
+            ,
+
+            40
+            ,
+
+            "boy"
+        ],
+        [
+
+            "Samantha"
+            ,
+
+            60
+            ,
+
+            "girl"
+
+        ]
+        ,
+        [
+
+            "Samantha"
+            ,
+
+            60
+            ,
+
+            "girl"
+
+        ]
 
     ]
 }

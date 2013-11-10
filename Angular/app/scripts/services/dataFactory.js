@@ -3,7 +3,7 @@
  */
 
 
-var boolParser = angular.module('data', [])
+angular.module('data', [])
 
     .factory('dataFactory', function ($http) {
         return {
@@ -18,7 +18,7 @@ var boolParser = angular.module('data', [])
                                 callback.apply(this, arguments);
                      })
                 }
-                }
+              }
             },
             saveRecord: function () {
 

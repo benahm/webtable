@@ -1,30 +1,26 @@
 /**
- * Created by Bensaad on 08/11/13.
+ * Created by Ahmed on 08/11/13.
  */
 
 var directivesModule = angular.module("directivesModule", ["tableController"]);
 directivesModule.directive('doFocus',function ($timeout) {
     return {
         link: function (scope, element, attrs) {
-            var tablescope = $("#webtable").scope();
 
-            scope.cellChanged=function(){
-                tablescope.datas.body[tablescope.selectedRecordValue].changed=true;
-                tablescope.$apply();
-            }
+
+
             scope.$watch(attrs.doFocus, function (value) {
                 if (value === true) {
                     element[0].focus();
                     //scope.query_record.focused=true;
                     $timeout(function () {
-
+                        var tablescope = $("#webtable").scope();
                         if (!scope.nq) {
                             tablescope.show_query_record = false;
                         }
                         if (scope.outerindex != undefined) {
                             tablescope.selectedRecordValue = scope.outerindex;
                         }
-                        console.log("hoooo")
                         if (!scope.nq) {
                             if (tablescope.new_record) {
                                 /*tablescope.datas.body.unshift(tablescope.new_record);
@@ -69,6 +65,15 @@ directivesModule.directive('doFocus',function ($timeout) {
                 index: "=",
                 nq: "@"
             },
-            replace: true
+            replace: true,
+            link:function(scope, element, attrs){
+                scope.cellChanged=function(){
+                    //tablescope.datas.body[tablescope.selectedRecordValue].changed=true;
+                    //tablescope.$apply();
+                    var tablescope = $("#webtable").scope();
+                    if(attrs.nq="new_record")
+                        tablescope.new_record[scope.index]=scope.d;
+                }
+            }
         };
     });
