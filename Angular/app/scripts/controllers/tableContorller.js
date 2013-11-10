@@ -1,28 +1,14 @@
 /**
  * Created by Bensaad on 08/11/13.
  */
-var tableController=angular.module("tableController",[]);
-tableController.controller("tableController",function($scope){
+var tableController=angular.module("tableController",["data"]);
+tableController.controller("tableController",function($scope,$http,dataFactory){
     $scope.message="hello,world"
-    $scope.datas={
-        info:{
-            pgNum:6,
-            pgTotal:7
-        },
-        head:["name","age","gender"],
-        body:[
-            [{value:'John'},{value:25}, {value:'boy'}],
-            [{value:'Jessie'},{value: 30}, {value:'girl'}],
-            [{value:'Johanna'},{value: 28}, {value:'girl'}],
-            [{value:'Joy'}, {value:15}, {value:'girl'}],
-            [{value:'Mary'}, {value:28}, {value:'girl'}],
-            [{value:'Peter'},{value: 95}, {value:'boy'}],
-            [{value:'Sebastian'},{value: 50}, {value:'boy'}],
-            [{value:'Erika'}, {value:27}, {value:'girl'}],
-            [{value:'Patrick'},{value: 40}, {value:'boy'}],
-            [{value:'Samantha'},{value: 60},{value: 'girl'}]
-        ]}
+    $scope.datas={};
 
+     dataFactory.getData("../json/test.json").success(function(data){
+        $scope.datas=data;
+    })
     /**
      * Sort and selection
      *
@@ -78,6 +64,6 @@ tableController.controller("tableController",function($scope){
         return new Array(num);
     }
 
-    $scope.decalePage=($scope.datas.info.pgNum-3)<0?0:($scope.datas.info.pgNum-3);
+    //$scope.decalePage=($scope.datas.info.pgNum-3)<0?0:($scope.datas.info.pgNum-3);
 
 });

@@ -2,11 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3702d905-e38e-478e-83c1-ae66749eba58" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/dataFactory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/json/test.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.eot" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.ttf" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.woff" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.eot" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.otf" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.ttf" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.woff" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-large-inverted.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-large-inverted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-large.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-large.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-medium-inverted.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-medium-inverted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-medium.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-medium.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-mini-inverted.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-mini-inverted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-mini.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-mini.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-small-inverted.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-small-inverted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-small.gif" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/images/loader-small.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/accordion.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/accordion.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/api.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/basic.icon.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/basic.icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.svg" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/basic.icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/breadcrumb.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/breadcrumb.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/button.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/chatroom.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/chatroom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/chatroom.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/chatroom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/checkbox.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/checkbox.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/colorize.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/colorize.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/commandController.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/commandController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/views/comment.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/views/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dimmer.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dimmer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dimmer.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dimmer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directives/directives.js" afterPath="$PROJECT_DIR$/app/scripts/directives/directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/divider.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dropdown.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dropdown.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/views/feed.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/views/feed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/filters/filters.js" afterPath="$PROJECT_DIR$/app/scripts/filters/filters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/form.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/form.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/grid.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/header.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/icon.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.svg" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/image.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/image.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/input.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/views/item.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/views/item.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/label.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/label.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/views/list.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/views/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/loader.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/loader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/menu.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/message.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/message.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/modal.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/modal.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/nag.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/nag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/nag.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/nag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parser.html" afterPath="$PROJECT_DIR$/app/views/parser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/parser.js" afterPath="$PROJECT_DIR$/app/scripts/services/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/popup.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/popup.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/progress.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/rating.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/rating.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/rating.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/rating.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/reveal.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/reveal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/router.js" afterPath="$PROJECT_DIR$/app/scripts/services/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/search.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/search.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/segment.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/segment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/shape.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/shape.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/shape.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/shape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/sidebar.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/sidebar.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/state.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/behavior/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/views/statistic.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/views/statistic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/step.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/elements/step.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/tab.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/tab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/tab.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/table.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/collections/table.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/transition.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/transition.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/transition.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/video.css" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/video.js" afterPath="$PROJECT_DIR$/app/vendor/semantic-ui/modules/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/webtable-cell-nq.html" afterPath="$PROJECT_DIR$/app/views/webtable-cell-nq.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/webtable-cell.html" afterPath="$PROJECT_DIR$/app/views/webtable-cell.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,7 +116,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="55" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.833333" vertical-offset="334" max-vertical-offset="2520">
+            <state line="121" column="42" selection-start="6245" selection-end="6245" vertical-scroll-proportion="-5.4583335" vertical-offset="1684" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
@@ -58,28 +140,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webtable-cell.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="104" selection-start="269" selection-end="280" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="parser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3285">
+            <state line="4" column="0" selection-start="44" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="3285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.32608697" vertical-offset="45" max-vertical-offset="1185">
+            <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -89,15 +162,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/parser.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="21" column="41" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="41" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -115,8 +179,28 @@
       <file leaf-file-name="tableContorller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="6" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-13.52" vertical-offset="607" max-vertical-offset="1320">
+            <state line="8" column="44" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/json/test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="176" column="0" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-16.625" vertical-offset="2241" max-vertical-offset="2790">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataFactory.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/scripts/services/dataFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="20" selection-start="108" selection-end="108" vertical-scroll-proportion="0.13089006" vertical-offset="0" max-vertical-offset="630">
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,19 +223,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/webtable-cell-nq.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/menuContorller.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/router.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pageController.js" />
         <option value="$PROJECT_DIR$/app/views/parser.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/boolParser.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/filters/filters.js" />
-        <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/views/webtable-cell.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/commandController.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
+        <option value="$PROJECT_DIR$/app/json/test.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/test.json.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/test.json" />
+        <option value="$PROJECT_DIR$/app/json/test.json" />
+        <option value="$PROJECT_DIR$/app/scripts/services/dataFacotry.js" />
+        <option value="$PROJECT_DIR$/app/views/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/services/dataFactory.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
       </list>
     </option>
   </component>
@@ -187,6 +274,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,9 +421,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,8 +455,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -359,6 +464,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -367,14 +480,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -418,14 +523,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="25" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24275362" sideWeight="0.670418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24275362" sideWeight="0.67202574" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -434,8 +539,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -457,27 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="20" selection-start="1466" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="15" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="38" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="340">
@@ -513,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="112" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
@@ -534,23 +611,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="55" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.833333" vertical-offset="334" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="104" selection-start="269" selection-end="280" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
+        <state line="2" column="104" selection-start="269" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="6" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-13.52" vertical-offset="607" max-vertical-offset="1320">
+        <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>
@@ -562,10 +632,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
+    <entry file="file://$PROJECT_DIR$/app/json/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.32608697" vertical-offset="45" max-vertical-offset="1185">
+        <state line="176" column="0" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-16.625" vertical-offset="2241" max-vertical-offset="2790">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="44" selection-end="133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="42" selection-start="6245" selection-end="6245" vertical-scroll-proportion="-5.4583335" vertical-offset="1684" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/dataFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="108" selection-end="108" vertical-scroll-proportion="0.13089006" vertical-offset="0" max-vertical-offset="630">
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
