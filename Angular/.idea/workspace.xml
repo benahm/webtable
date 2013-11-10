@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3702d905-e38e-478e-83c1-ae66749eba58" name="Default" comment="" />
+    <list default="true" id="3702d905-e38e-478e-83c1-ae66749eba58" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Angular.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,19 +28,17 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="55" selection-start="4994" selection-end="4994" vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="2499">
+            <state line="38" column="55" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.833333" vertical-offset="334" max-vertical-offset="2520">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commandController.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="commandController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/commandController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-0.051601425" vertical-offset="845" max-vertical-offset="1428">
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
+            <state line="85" column="57" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="2295">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,7 +46,7 @@
       <file leaf-file-name="webtable-cell-nq.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/webtable-cell-nq.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170">
+            <state line="4" column="6" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="webtable-cell.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="122" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="238">
+            <state line="2" column="104" selection-start="269" selection-end="280" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -64,16 +64,16 @@
       <file leaf-file-name="parser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="3723">
+            <state line="14" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="778" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1241">
+            <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.32608697" vertical-offset="45" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="parser.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/parser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="41" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="527">
+            <state line="21" column="41" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
       <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="41" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="425">
+            <state line="7" column="41" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -100,7 +100,7 @@
       <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/filters/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="50" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="799">
+            <state line="4" column="50" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -109,7 +109,7 @@
       <file leaf-file-name="tableContorller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="20" selection-start="1466" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1479">
+            <state line="63" column="6" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-13.52" vertical-offset="607" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -122,6 +122,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -129,25 +137,25 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/menuContorller.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/router.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pageController.js" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
         <option value="$PROJECT_DIR$/app/views/parser.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/boolParser.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/filters/filters.js" />
+        <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/views/webtable-cell.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
-        <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/commandController.js" />
+        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="25" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -326,13 +334,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -395,17 +408,27 @@
       <created>1383850420874</created>
       <updated>1383850420874</updated>
     </task>
+    <task id="LOCAL-00001" summary="multiple bugfix">
+      <created>1384048675733</created>
+      <updated>1384048675733</updated>
+    </task>
+    <task id="LOCAL-00002" summary="...">
+      <created>1384049072319</created>
+      <updated>1384049072319</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="25" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.6715928" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24275362" sideWeight="0.670418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -415,6 +438,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -427,6 +451,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="multiple bugfix" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -511,40 +538,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
+    <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="122" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="238">
+        <state line="38" column="55" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-9.833333" vertical-offset="334" max-vertical-offset="2520">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
+    <entry file="file://$PROJECT_DIR$/app/views/webtable-cell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="778" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1241">
+        <state line="2" column="104" selection-start="269" selection-end="280" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="20" selection-start="1466" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="577" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="55" selection-start="4994" selection-end="4994" vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="2499">
+        <state line="63" column="6" selection-start="1956" selection-end="1956" vertical-scroll-proportion="-13.52" vertical-offset="607" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/commandController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-0.051601425" vertical-offset="845" max-vertical-offset="1428">
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+        <state line="85" column="57" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.32608697" vertical-offset="45" max-vertical-offset="1185">
+          <folding />
         </state>
       </provider>
     </entry>

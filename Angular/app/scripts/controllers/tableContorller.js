@@ -27,6 +27,7 @@ tableController.controller("tableController",function($scope){
      * Sort and selection
      *
      */
+    $scope.selectedRecordValue=-1;
     $scope.activeRecord=function(index){
         if( $scope.selectedRecordValue===index)
             return "active"

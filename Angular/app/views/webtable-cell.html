@@ -1,6 +1,6 @@
 <div>
     <div class="cell"  tabindex="{{innerindex+(outerindex+1)*(maxouterindex)}}" ng-show="!focused"  ng-click="focused=true" ng-focus="focused=true"  >{{ d.value }}</div>
-    <input  size="60" tabindex="{{innerindex+(outerindex+1)*(maxouterindex)}}" type="text" ng-show="focused"  ng-model="d.value" ng-blur="focused=false" do-focus="focused">
+    <input   tabindex="{{innerindex+(outerindex+1)*(maxouterindex)}}" type="text" ng-change="cellChanged()" ng-show="focused"  ng-model="d.value" ng-blur="focused=false" do-focus="focused">
 </div>
 
 
