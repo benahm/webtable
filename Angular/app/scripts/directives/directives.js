@@ -2,17 +2,19 @@
  * Created by Ahmed on 08/11/13.
  */
 
+/**
+ * directives of the project
+ * @type {*}
+ */
 var directivesModule = angular.module("directivesModule", ["tableController"]);
 directivesModule.directive('doFocus',function ($timeout) {
     return {
         link: function (scope, element, attrs) {
-
-
-
+            // watch the value focused on the attrs.doFocus
             scope.$watch(attrs.doFocus, function (value) {
                 if (value === true) {
-                    element[0].focus();
-                    //scope.query_record.focused=true;
+                    element[0].focus(); // focus on the element
+
                     $timeout(function () {
                         var tablescope = $("#webtable").scope();
                         if (!scope.nq) {
@@ -34,17 +36,7 @@ directivesModule.directive('doFocus',function ($timeout) {
             });
         }
     };
-}).directive("ngCell",function () {
-    }).directive('ngClickOutside',function ($document) {
-        return {
-            restrict: 'A',
-            link: function (scope, elem, attr, ctrl) {
-                $(elem).blur(function () {
-                    scope.$apply(attr.ngClickOutside);
-                })
-            }
-        }
-    }).directive('webtableCell',function () {
+}).directive('webtableCell',function () {
         return {
             restrict: 'AE',
             templateUrl: 'webtable-cell.html',
@@ -68,8 +60,6 @@ directivesModule.directive('doFocus',function ($timeout) {
             replace: true,
             link:function(scope, element, attrs){
                 scope.cellChanged=function(){
-                    //tablescope.datas.body[tablescope.selectedRecordValue].changed=true;
-                    //tablescope.$apply();
                     var tablescope = $("#webtable").scope();
                     if(attrs.nq="new_record")
                         tablescope.new_record[scope.index]=scope.d;
