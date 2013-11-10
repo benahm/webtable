@@ -6,12 +6,18 @@ var directivesModule = angular.module("directivesModule", ["tableController"]);
 directivesModule.directive('doFocus',function ($timeout) {
     return {
         link: function (scope, element, attrs) {
+            var tablescope = $("#webtable").scope();
+
+            scope.cellChanged=function(){
+                tablescope.datas.body[tablescope.selectedRecordValue].changed=true;
+                tablescope.$apply();
+            }
             scope.$watch(attrs.doFocus, function (value) {
                 if (value === true) {
                     element[0].focus();
                     //scope.query_record.focused=true;
                     $timeout(function () {
-                        var tablescope = $("#webtable").scope();
+
                         if (!scope.nq) {
                             tablescope.show_query_record = false;
                         }

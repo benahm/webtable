@@ -36,17 +36,36 @@
                 <li><a href="#" ng-click="queryRecord()">New query</a></li>
                 <li><a href="#" ng-click="!query_record||refineQueryRecord()">Refine query</a></li>
                 <li class="divider"></li>
-                <li><a href="#" ng-click="">About record</a></li>
-                <li><a href="#" ng-click="">Count records</a></li>
+                <li><a href="#" ng-click="aboutRecord()">About record</a></li>
+                <li><a href="#" ng-click="countRecords()">Count records</a></li>
             </ul>
         </div>
-        <button class="btn" ng-click="newRecord()" ng-hide="show_query_record || show_new_record">New</button>
-        <button class="btn" ng-click="deleteRecord()" ng-hide="show_query_record || show_new_record">Delete</button>
-        <button class="btn" ng-click="cancelRecord()" ng-hide="!show_new_record">Cancel</button>
-        <button class="btn" ng-click="saveRecord()" ng-hide="!show_new_record">Save</button>
-        <button class="btn" ng-click="queryRecord()" ng-hide="show_query_record || show_new_record">Query</button>
-        <button class="btn" ng-click="executeQueryRecord()" ng-show="query_record">Execute</button>
-        <button class="btn" ng-click="clearQueryRecord()" ng-show="query_record">Clear</button>
+        <button class="btn" ng-click="newRecord()" ng-hide="commands.newRecord()">New</button>
+        <button class="btn" ng-click="deleteRecord()" ng-hide="commands.deleteRecord()">Delete</button>
+        <button class="btn" ng-click="cancelRecord()" ng-hide="commands.cancelRecord()">Cancel</button>
+        <button class="btn" ng-click="saveRecord()" ng-hide="commands.saveRecord()">Save</button>
+        <button class="btn" ng-click="queryRecord()" ng-hide="commands.queryRecord()">Query</button>
+        <button class="btn" ng-click="executeQueryRecord()" ng-hide="commands.executeQueryRecord()">Execute</button>
+        <button class="btn" ng-click="clearQueryRecord()" ng-hide="commands.clearQueryRecord()">Clear</button>
+
+        <div class="modal fade in" ng-class="modal.isVisible">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="false" ng-click="modal.close()" >&times;</button>
+                        <h3 class="modal-title"><i class="glyphicon glyphicon-info-sign"></i></h3>
+                    </div>
+                    <div class="modal-body">
+                        {{modal.message}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal" ng-click="modal.close()">Close</button>
+                        <button type="button" class="btn" ng-click="modal.ok()">OK</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
     </div>
     <table class="table table-striped table-bordered">
         <thead>
@@ -137,6 +156,8 @@
         height: 25px;
         text-align: center;
     }
+
+
 
 </style>
 </html>
