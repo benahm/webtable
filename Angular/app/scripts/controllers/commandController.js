@@ -167,12 +167,16 @@ angular.module("commandController", ["constraint"])
              */
             close: function () {
                 $scope.modal.isVisible = "hide";
+                $scope.modal.data=undefined;
+                $scope.message=undefined;
             },
             /**
              * default action when click on OK (close the modal)
              */
             ok: function () {
                 $scope.modal.isVisible = "hide";
+                $scope.modal.data=undefined;
+                $scope.message=undefined;
             }
         }
 

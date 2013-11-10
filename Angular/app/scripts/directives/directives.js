@@ -48,7 +48,7 @@ directivesModule.directive('doFocus',function ($timeout) {
             },
             replace: true
         };
-    }).directive('webtableCellNq', function () {
+    }).directive('webtableCellNq', function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'webtable-cell-nq.html',
@@ -61,8 +61,13 @@ directivesModule.directive('doFocus',function ($timeout) {
             link:function(scope, element, attrs){
                 scope.cellChanged=function(){
                     var tablescope = $("#webtable").scope();
-                    if(attrs.nq="new_record")
-                        tablescope.new_record[scope.index]=scope.d;
+                    $timeout(function () {
+                        if(attrs.nq=="new_record")
+                            tablescope.new_record[scope.index]=scope.d;
+                        if(attrs.nq=="query_record")
+                            tablescope.query_record[scope.index]=scope.d;
+                        tablescope.$apply();
+                    });
                 }
             }
         };
