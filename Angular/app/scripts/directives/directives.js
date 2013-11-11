@@ -71,4 +71,9 @@ directivesModule.directive('doFocus',function ($timeout) {
                 }
             }
         };
+    }).directive("webtable",function(){
+        return {
+            restrict: 'AE',
+            templateUrl: 'webtable.html'
+        }
     });

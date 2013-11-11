@@ -1,0 +1,103 @@
+<div id="webtable"  ng-controller="tableController">
+    <div class="commands" ng-controller="commandController">
+        <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                Menu <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" ng-click="cancelRecord()">Cancel record</a></li>
+                <li><a href="#" ng-click="deleteRecord()">Delete record</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="newRecord()">New record</a></li>
+                <li><a href="#" ng-click="copyRecord()">Copy record</a></li>
+                <li><a href="#" ng-click="saveRecord()">Save Record</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="queryRecord()">New query</a></li>
+                <li><a href="#" ng-click="!query_record||refineQueryRecord()">Refine query</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="aboutRecord()">About record</a></li>
+                <li><a href="#" ng-click="countRecords()">Count records</a></li>
+            </ul>
+        </div>
+        <button class="btn" ng-click="newRecord()" ng-hide="commands.newRecord()">New</button>
+        <button class="btn" ng-click="deleteRecord()" ng-hide="commands.deleteRecord()">Delete</button>
+        <button class="btn" ng-click="cancelRecord()" ng-hide="commands.cancelRecord()">Cancel</button>
+        <button class="btn" ng-click="saveRecord()" ng-hide="commands.saveRecord()">Save</button>
+        <button class="btn" ng-click="queryRecord()" ng-hide="commands.queryRecord()">Query</button>
+        <button class="btn" ng-click="executeQueryRecord()" ng-hide="commands.executeQueryRecord()">Execute</button>
+        <button class="btn" ng-click="clearQueryRecord()" ng-hide="commands.clearQueryRecord()">Clear</button>
+
+        <div class="modal fade in" ng-class="modal.isVisible">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="false" ng-click="modal.close()" >&times;</button>
+                        <h3 class="modal-title"><i class="glyphicon glyphicon-info-sign"></i></h3>
+                    </div>
+                    <div class="modal-body">
+                        {{modal.message}}
+                        <div ng-if="modal.data">
+                            [{{modal.data.nameColumn}}]
+                            <br/>
+                            <ul>
+                                <li ng-repeat="message in modal.data.messages">
+                                    {{message}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal" ng-click="modal.close()">Close</button>
+                        <button type="button" class="btn" ng-click="modal.ok()">OK</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th ng-repeat="element in datas.head" ng-click="setSelectedColumn($index)">
+                <i class="glyphicon glyphicon-sort" ng-hide="columnNum==$index"></i>
+                <i class="glyphicon glyphicon-chevron-up pull-up" ng-show="!reverseSort&&columnNum==$index"></i>
+                <i class="glyphicon glyphicon-chevron-down " ng-show="reverseSort&&columnNum==$index"></i>
+                {{element.name}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-show="show_query_record" class="success">
+            <td>*</td>
+            <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index">
+                <div webtable-cell-nq datacell="d" index="innerindex" nq="query_record"></div>
+            </td>
+        </tr>
+        <tr ng-show="new_record" class="success">
+            <td>*</td>
+            <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
+                <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
+            </td>
+        </tr>
+        <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort" ng-class="activeRecord(outerindex)">
+            <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'*':'-'}}</td>
+            <td ng-repeat="d in data track by $index " ng-init="innerindex=$index"  style="width: {{100/datas.head.length}}%" >
+                <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex"
+                     maxouterindex="datas.head.length"></div>
+            </td>
+        </tr>
+        <tr ng-repeat="i in makeArray(15-datas.body.length) track by $index">
+            <td class="well">-</td>
+        </tr>
+        </tbody>
+    </table>
+    <div ng-controller="pageController as page">
+        <ul class="pagination pagination-sm" >
+            <li ><a href="" ng-click="page.next()">&laquo;</a></li>
+            <li ng-class="page.active==$index+1?'active':''" ng-repeat="i in makeArray(page.to-page.from+1) track by $index">
+                <a href="" ng-click="page.goto($index)">{{$index+page.from}}</a>
+            </li>
+            <li><a href="" ng-click="page.previous()">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
