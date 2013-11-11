@@ -112,13 +112,15 @@
         </tr>
         </tbody>
     </table>
-    <ul class="pagination pagination-sm" ng-controller="pageController">
-        <li ><a href="#" ng-click="nextPage()">&laquo;</a></li>
-        <li ng-repeat="i in makeArray(decalePage+datas.info.pgTotal-datas.info.pgNum) track by $index">
-            <a href="#" g-click="gotoPage($index)">{{$index+decalePage}}</a>
-        </li>
-        <li><a href="#" ng-click="previousPage()">&raquo;</a></li>
-    </ul>
+    <div ng-controller="pageController as page">
+        <ul class="pagination pagination-sm" >
+            <li ><a href="" ng-click="page.next()">&laquo;</a></li>
+            <li ng-repeat="i in makeArray(page.to-page.from+1) track by $index">
+                <a href="" g-click="page.goto($index)">{{$index+page.from}}</a>
+            </li>
+            <li><a href="" ng-click="page.previous()">&raquo;</a></li>
+        </ul>
+    </div>
 </div>
 
 <div id="footer">
@@ -129,6 +131,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+<script src="../scripts/configuration/config.js"></script>
 <script src="../scripts/services/dataFactory.js"></script>
 <script src="../scripts/services/constraintFactory.js"></script>
 <script src="../scripts/services/parser.js"></script>

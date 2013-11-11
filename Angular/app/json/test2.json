@@ -1,6 +1,7 @@
 {
     "info": {
-        "total":28
+        "pgNum": 6,
+        "pgTotal": 7
     },
     "head": [
         {
@@ -20,17 +21,17 @@
     ],
     "body": [
         [
-            "John"
+            "Joh"
             ,
             25
             ,
 
-            "boy"
+            "bo"
 
         ],
         [
 
-            "Jessie"
+            "Jessi"
             ,
 
             30
@@ -41,7 +42,7 @@
         ],
         [
 
-            "Johanna"
+            "Johann"
             ,
 
             28
@@ -52,7 +53,7 @@
         ],
         [
 
-            "Joy"
+            "Jo"
             ,
 
             15
@@ -74,7 +75,7 @@
         ],
         [
 
-            "Peter"
+            "Pete"
             ,
 
             95
@@ -96,7 +97,7 @@
         ],
         [
 
-            "Erika"
+            "Erik"
             ,
 
             27
@@ -104,7 +105,7 @@
             "girl"
         ],
         [
-            "Patrick"
+            "Patric"
             ,
 
             40
@@ -126,7 +127,7 @@
         ,
         [
 
-            "Samantha"
+            "Samanth"
             ,
 
             60

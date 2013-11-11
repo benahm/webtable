@@ -5,7 +5,7 @@
 /**
  * commands management
  */
-angular.module("commandController", ["constraint"])
+angular.module("commandController", ["constraint","configuration"])
     .controller("commandController", function ($scope, constraintFactory) {
         /**
          * Commands

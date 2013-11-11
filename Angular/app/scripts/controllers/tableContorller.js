@@ -5,7 +5,7 @@
 /**
  * Table management
  */
-angular.module("tableController", ["data"])
+angular.module("tableController", ["data","configuration"])
     .controller("tableController", function ($scope, $http, dataFactory) {
         $scope.message = "hello,world"
         $scope.datas = {};
@@ -51,21 +51,9 @@ angular.module("tableController", ["data"])
             else return $scope.datas.body.indexOf(data);
         };
 
-        /**
-         * Pages
-         */
-
-        $scope.pageRange = function () {
-            var lowerBound, upperBound;
-            if ($scope.datas.info.pgNum > 3) {
-
-            }
-        }
 
         $scope.makeArray = function (num) {
             return new Array(num);
         }
-
-        //$scope.decalePage=($scope.datas.info.pgNum-3)<0?0:($scope.datas.info.pgNum-3);
 
     });

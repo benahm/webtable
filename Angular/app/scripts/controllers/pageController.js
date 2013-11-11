@@ -4,16 +4,19 @@
 /**
  * page management
  */
-angular.module("pageController", [])
-    .controller("pageController", function ($scope, $http, dataFactory) {
-
+angular.module("pageController", ["data","configuration"])
+    .controller("pageController", function ($scope,dataFactory) {
+        //TODO to implement
+        console.log(API_END_POINT);
         /**
          * display the next page on the table
          */
-        $scope.nextPage=function(){
+        this.next=function(){
+            console.log("hello")
             //get the data from the server
-            dataFactory.getData("../json/test.json").success(function (data) {
-                $scope.datas = data;
+            dataFactory.getData("../json/test2.json").success(function (data) {
+                $scope.$parent.datas = data;
+                console.log("hello")
             })
         };
 
@@ -21,21 +24,24 @@ angular.module("pageController", [])
          * display a specific page
          * @param index of the page to display
          */
-        $scope.gotoPage=function(index){
+        this.goto=function(index){
             //get the data from the server
             dataFactory.getData("../json/test.json").success(function (data) {
-                $scope.datas = data;
+                $scope.$parent.datas = data;
             })
         };
 
         /**
          * display the previous page on the table
          */
-        $scope.previousPage=function(){
+        this.previous=function(){
             //get the data from the server
             dataFactory.getData("../json/test.json").success(function (data) {
-                $scope.datas = data;
+                $scope.$parent.datas = data;
             })
         };
 
+        this.from=1
+
+        this.to=7
     });
