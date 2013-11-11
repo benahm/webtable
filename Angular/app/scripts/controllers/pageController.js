@@ -7,7 +7,7 @@
 angular.module("pageController", ["data","configuration"])
     .controller("pageController", function ($scope,dataFactory) {
         //TODO to implement
-        console.log(API_END_POINT);
+        var _this=this;
         /**
          * display the next page on the table
          */
@@ -25,10 +25,11 @@ angular.module("pageController", ["data","configuration"])
          * @param index of the page to display
          */
         this.goto=function(index){
+            _this.active=index+1;
             //get the data from the server
-            dataFactory.getData("../json/test.json").success(function (data) {
-                $scope.$parent.datas = data;
-            })
+//            dataFactory.getData("../json/test.json").success(function (data) {
+//                $scope.$parent.datas = data;
+//            })
         };
 
         /**
@@ -41,7 +42,21 @@ angular.module("pageController", ["data","configuration"])
             })
         };
 
+        /**
+         * from which page to display of number of pages
+         * @type {number}
+         */
         this.from=1
 
-        this.to=7
+        /**
+         * until which page to display the number of pages
+         * @type {number}
+         */
+        this.to=5
+
+        /**
+         * the active page
+         * @type {number}
+         */
+        this.active=3;
     });

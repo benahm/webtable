@@ -101,7 +101,7 @@
             </td>
         </tr>
         <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort" ng-class="activeRecord(outerindex)">
-            <td ng-click="setSelectedRecord(outerindex)">{{selectedRecord(outerindex)?'*':'-'}}</td>
+            <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'*':'-'}}</td>
             <td ng-repeat="d in data track by $index " ng-init="innerindex=$index"  style="width: {{100/datas.head.length}}%" >
                 <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex"
                      maxouterindex="datas.head.length"></div>
@@ -115,8 +115,8 @@
     <div ng-controller="pageController as page">
         <ul class="pagination pagination-sm" >
             <li ><a href="" ng-click="page.next()">&laquo;</a></li>
-            <li ng-repeat="i in makeArray(page.to-page.from+1) track by $index">
-                <a href="" g-click="page.goto($index)">{{$index+page.from}}</a>
+            <li ng-class="page.active==$index+1?'active':''" ng-repeat="i in makeArray(page.to-page.from+1) track by $index">
+                <a href="" ng-click="page.goto($index)">{{$index+page.from}}</a>
             </li>
             <li><a href="" ng-click="page.previous()">&raquo;</a></li>
         </ul>

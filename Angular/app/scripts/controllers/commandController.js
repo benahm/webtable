@@ -97,7 +97,7 @@ angular.module("commandController", ["constraint","configuration"])
 
         /* Count Records */
         $scope.countRecords = function () {
-            var count = $scope.datas.body.length;
+            var count = $scope.datas.info.countRecords;
             $scope.modal.display("Total: " + count + " records.");
         }
 
