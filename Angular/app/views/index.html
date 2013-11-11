@@ -19,7 +19,7 @@
         <p class="navbar-text">alpha version 0.0.0.1</p>
     </div>
 </nav>
-<div id="webtable" ng-controller="tableController">
+<div id="webtable"  ng-controller="tableController">
     <div class="commands" ng-controller="commandController">
         <div class="btn-group">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
@@ -107,16 +107,17 @@
                      maxouterindex="datas.head.length"></div>
             </td>
         </tr>
+        <tr ng-repeat="i in makeArray(15-datas.body.length) track by $index">
+            <td class="well">-</td>
+        </tr>
         </tbody>
     </table>
-
-
-    <ul class="pagination" ng-hide="true" >
-        <li><a href="#">&laquo;</a></li>
+    <ul class="pagination pagination-sm" ng-controller="pageController">
+        <li ><a href="#" ng-click="nextPage()">&laquo;</a></li>
         <li ng-repeat="i in makeArray(decalePage+datas.info.pgTotal-datas.info.pgNum) track by $index">
-            <a href="#" ng-click="getPage($index)">{{$index+decalePage}}</a>
+            <a href="#" g-click="gotoPage($index)">{{$index+decalePage}}</a>
         </li>
-        <li><a href="#">&raquo;</a></li>
+        <li><a href="#" ng-click="previousPage()">&raquo;</a></li>
     </ul>
 </div>
 
@@ -133,6 +134,7 @@
 <script src="../scripts/services/parser.js"></script>
 <script src="../scripts/directives/directives.js"></script>
 <script src="../scripts/filters/filters.js"></script>
+<script src="../scripts/controllers/pageController.js"></script>
 <script src="../scripts/controllers/commandController.js"></script>
 <script src="../scripts/controllers/tableContorller.js"></script>
 <script src="../scripts/app.js"></script>
@@ -155,6 +157,7 @@
     .table > tbody > tr > td {
         padding: 0;
         text-align: center;
+        height: 26px;
     }
     .table > thead > tr > th {
         text-align: center;
