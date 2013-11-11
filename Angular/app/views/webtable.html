@@ -27,17 +27,17 @@
         <button class="btn" ng-click="executeQueryRecord()" ng-hide="commands.executeQueryRecord()">Execute</button>
         <button class="btn" ng-click="clearQueryRecord()" ng-hide="commands.clearQueryRecord()">Clear</button>
 
-        <div class="modal fade in" ng-class="modal.isVisible">
+        <div class="modal fade in" ng-controller="modalController as modal" ng-class="modal.isVisible">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="false" ng-click="modal.close()" >&times;</button>
-                        <h3 class="modal-title"><i class="glyphicon glyphicon-info-sign"></i></h3>
+                        <h3 class="modal-title"><i class="glyphicon {{modal.icon}}"></i></h3>
                     </div>
                     <div class="modal-body">
                         {{modal.message}}
                         <div ng-if="modal.data">
-                            [{{modal.data.nameColumn}}]
+                            {{modal.data.title}}:
                             <br/>
                             <ul>
                                 <li ng-repeat="message in modal.data.messages">
@@ -47,8 +47,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal" ng-click="modal.close()">Close</button>
-                        <button type="button" class="btn" ng-click="modal.ok()">OK</button>
+                        <button type="button" class="btn" data-dismiss="modal" ng-click="modal.btnLeft.action()" ng-show="modal.btnLeft.isVisible">{{modal.btnLeft.label}}</button>
+                        <button type="button" class="btn" ng-click="modal.btnRight.action()" ng-show="modal.btnRight.isVisible">{{modal.btnRight.label}}</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
