@@ -5,8 +5,8 @@
 /**
  * commands management
  */
-angular.module("commandController", ["constraint","configuration"])
-    .controller("commandController", function ($scope,$rootScope, constraintFactory) {
+angular.module("commandController", ["constraint", "configuration"])
+    .controller("commandController", function ($scope, $rootScope, constraintFactory) {
         /**
          * Commands
          */
@@ -36,7 +36,8 @@ angular.module("commandController", ["constraint","configuration"])
                 tablescope.datas.body.unshift($scope.new_record);
                 tablescope.new_record = undefined;
                 tablescope.show_new_record = false;
-            } else $rootScope.$broadcast("errors",check);
+                tablescope.selectedRecordValue = 0
+            } else $rootScope.$broadcast("errors", check);
         }
 
         /* Copy Record */
@@ -46,7 +47,7 @@ angular.module("commandController", ["constraint","configuration"])
                 var record = $scope.datas.body[$scope.selectedRecordValue];
                 var copyOfRecord = (JSON.parse(JSON.stringify(record)));
                 tablescope.datas.body.splice($scope.selectedRecordValue, 0, copyOfRecord);
-            } else $rootScope.$broadcast("error","No record selected!");//display error
+            } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
         /* Delete Record */
@@ -56,7 +57,7 @@ angular.module("commandController", ["constraint","configuration"])
                 if (index > 0)
                     tablescope.selectedRecordValue--;
                 tablescope.datas.body.splice(index, 1);
-            } else $rootScope.$broadcast("error","No record selected!");//display error
+            } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
         /* Query Record */
@@ -91,14 +92,14 @@ angular.module("commandController", ["constraint","configuration"])
             var index = $scope.selectedRecordValue;
             if (index != -1) {
                 var changed = false // TODO
-                $rootScope.$broadcast("inform",changed ? "The record has been modified." : "The record has not been modified yet.");
-            } else $rootScope.$broadcast("warning","No record selected!");// display warning
+                $rootScope.$broadcast("inform", changed ? "The record has been modified." : "The record has not been modified yet.");
+            } else $rootScope.$broadcast("warning", "No record selected!");// display warning
         }
 
         /* Count Records */
         $scope.countRecords = function () {
             var count = $scope.datas.info.countRecords;
-            $rootScope.$broadcast("inform","Total: " + count + " records.");// display info
+            $rootScope.$broadcast("inform", "Total: " + count + " records.");// display info
         }
 
         //TODO config commands

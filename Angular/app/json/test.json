@@ -5,6 +5,8 @@
     "head": [
         {
             "name": "name",
+            "type": "text", // bool, text , numeric, date, currency
+            "dataBind":"",
             "constraints": {
                 "required":"Name is required"
             }

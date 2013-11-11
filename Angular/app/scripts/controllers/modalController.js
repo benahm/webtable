@@ -70,7 +70,7 @@ angular.module("modalController", [])
          * @param callback callback to execute on click on the button OK
          */
         this.errors = function (data, callback) {
-            _this.icon = icon.error;
+            _this.icon = icons.error;
             _this.data = {
                 title: $scope.datas.head[data.index].name,
                 messages: data.messages
