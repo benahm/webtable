@@ -39,7 +39,7 @@ directivesModule.directive('doFocus',function ($timeout) {
 }).directive('webtableCell',function () {
         return {
             restrict: 'AE',
-            templateUrl: 'webtable-cell.html',
+            templateUrl: 'templates/webtable-cell.html',
             scope: {
                 d: "=datacell",
                 innerindex: "=",
@@ -51,7 +51,7 @@ directivesModule.directive('doFocus',function ($timeout) {
     }).directive('webtableCellNq', function ($timeout) {
         return {
             restrict: 'AE',
-            templateUrl: 'webtable-cell-nq.html',
+            templateUrl: 'templates/webtable-cell-nq.html',
             scope: {
                 d: "=datacell",
                 index: "=",
@@ -74,6 +74,17 @@ directivesModule.directive('doFocus',function ($timeout) {
     }).directive("webtable",function(){
         return {
             restrict: 'AE',
-            templateUrl: 'webtable.html'
+            templateUrl: 'templates/webtable.html'
+        }
+    }).directive("inputText",function(){
+        return {
+            restrict:'AE',
+            scope:{
+              focused:"=",
+              index:"@",
+              d:"="
+            },
+            templateUrl:'templates/inputs/input-text.html',
+            replace: true
         }
     });
