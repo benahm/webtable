@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3702d905-e38e-478e-83c1-ae66749eba58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/templates/webtable-cell-query.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/templates/webtable-cell-nq.html" afterPath="$PROJECT_DIR$/app/views/templates/webtable-cell-new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directives/directives.js" afterPath="$PROJECT_DIR$/app/scripts/directives/directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html" afterPath="$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/inputs/input-text.html" afterPath="$PROJECT_DIR$/app/views/templates/inputs/input-text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/inputController.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/inputController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/webtable-cell-new.html" afterPath="$PROJECT_DIR$/app/views/templates/webtable-cell-new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/webtable-cell-query.html" afterPath="$PROJECT_DIR$/app/views/templates/webtable-cell-query.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/webtable-cell.html" afterPath="$PROJECT_DIR$/app/views/templates/webtable-cell.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/templates/webtable.html" afterPath="$PROJECT_DIR$/app/views/templates/webtable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -41,37 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
+      <file leaf-file-name="webtable-cell-query.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-query.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="55" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1230">
+            <state line="2" column="71" selection-start="119" selection-end="119" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tableContorller.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
+      <file leaf-file-name="modalController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/modalController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="1515">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webtable-cell-new.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-new.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="110" selection-start="358" selection-end="358" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/filters/filters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+            <state line="70" column="11" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2265">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -79,13 +63,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webtable.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable.html">
+      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="71" selection-start="4271" selection-end="4271" vertical-scroll-proportion="-11.083333" vertical-offset="799" max-vertical-offset="1605">
+            <state line="76" column="57" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inputController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/inputController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="25" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding>
-                <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#40#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webtable-cell-new.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,16 +95,7 @@
       <file leaf-file-name="webtable-cell.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input-checkbox.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
+            <state line="9" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -111,17 +104,28 @@
       <file leaf-file-name="input-text.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="4" selection-start="10" selection-end="47" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
+            <state line="4" column="21" selection-start="191" selection-end="226" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webtable-cell-query.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-query.html">
+      <file leaf-file-name="input-checkbox.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="112" selection-start="355" selection-end="360" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="180">
+            <state line="2" column="63" selection-start="157" selection-end="157" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webtable.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/webtable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="32" selection-start="4795" selection-end="4795" vertical-scroll-proportion="0.5118397" vertical-offset="1024" max-vertical-offset="1785">
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,22 +148,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/json/test.json" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/inputController.js" />
         <option value="$PROJECT_DIR$/app/views/input-cell.html" />
         <option value="$PROJECT_DIR$/app/views/webtable-cell.html" />
         <option value="$PROJECT_DIR$/app/views/webtable-cell-nq.html" />
         <option value="$PROJECT_DIR$/app/scripts/filters/filters.js" />
         <option value="$PROJECT_DIR$/app/views/templates/webtable-cell-nq.html" />
         <option value="$PROJECT_DIR$/app/views/templates/webtable-query.html" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
-        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell-query.html" />
-        <option value="$PROJECT_DIR$/app/views/templates/webtable.html" />
-        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell-new.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/tableContorller.js" />
-        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell.html" />
+        <option value="$PROJECT_DIR$/app/views/templates/inputs/input-text.html" />
+        <option value="$PROJECT_DIR$/app/scripts/directives/directives.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/inputController.js" />
         <option value="$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html" />
+        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell-query.html" />
+        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell-new.html" />
+        <option value="$PROJECT_DIR$/app/views/templates/webtable-cell.html" />
+        <option value="$PROJECT_DIR$/app/views/templates/webtable.html" />
       </list>
     </option>
   </component>
@@ -240,6 +244,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inputs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -533,7 +563,11 @@
       <created>1384206940282</created>
       <updated>1384206940282</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="code refactoring">
+      <created>1384214620341</created>
+      <updated>1384214620341</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -578,7 +612,8 @@
     <MESSAGE value="refactoring modal" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="start managing input type" />
-    <option name="LAST_COMMIT_MESSAGE" value="start managing input type" />
+    <MESSAGE value="code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="code refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -589,22 +624,6 @@
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="68" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/modalController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="11" selection-start="2233" selection-end="2233" vertical-scroll-proportion="25.72" vertical-offset="1693" max-vertical-offset="2265">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/commandController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="73" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
           <folding />
         </state>
       </provider>
@@ -623,15 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/inputController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="99" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/filters/filters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
@@ -641,10 +651,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/commandController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/modalController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="11" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2265">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directives/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="55" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1230">
+        <state line="76" column="57" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1245">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="63" selection-start="157" selection-end="157" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/inputController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="25" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -655,54 +704,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/webtable.html">
+    <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="71" selection-start="4271" selection-end="4271" vertical-scroll-proportion="-11.083333" vertical-offset="799" max-vertical-offset="1605">
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="4" column="21" selection-start="191" selection-end="226" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-query.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="112" selection-start="355" selection-end="360" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/tableContorller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="1515">
+        <state line="2" column="71" selection-start="119" selection-end="119" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell-new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="110" selection-start="358" selection-end="358" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="10" selection-end="47" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
+        <state line="2" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/webtable-cell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
+        <state line="9" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/inputs/input-checkbox.html">
+    <entry file="file://$PROJECT_DIR$/app/views/templates/webtable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573">
-          <folding />
+        <state line="87" column="32" selection-start="4795" selection-end="4795" vertical-scroll-proportion="0.5118397" vertical-offset="1024" max-vertical-offset="1785">
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

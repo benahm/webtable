@@ -1,6 +1,8 @@
 <div>
-    <div ng-controller="inputController">
-        <input tabindex="{{index}}" type="text" ng-change="cellChanged()" ng-show="focused" ng-model="d"
-               ng-blur="focused=false" do-focus="focused">
+    <div class="cell" tabindex="{{tabindex(innerindex,outerindex)}}" ng-show="!focused"
+         ng-click="focused=true" ng-focus="focused=true">{{ d }}
     </div>
+    <input tabindex="{{tabindex(innerindex,outerindex)}}" type="text"
+           ng-change="cellChanged(d,outerindex,innerindex)"
+           ng-show="focused" ng-model="d" ng-blur="focused=false" do-focus="focused">
 </div>

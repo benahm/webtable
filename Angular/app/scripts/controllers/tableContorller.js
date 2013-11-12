@@ -82,17 +82,5 @@ angular.module("tableController", ["data", "configuration"])
             return new Array(num);
         }
 
-        /* apply changes */
 
-        $scope.cellChanged=function(d,i,j){
-            $scope.datas.body[i][j]=d;
-        }
-
-        $scope.queryCellChanged=function(d,i){
-            $scope.query_record[i]=d;
-        }
-
-        $scope.newCellChanged=function(d,i){
-            $scope.new_record[i]=d;
-        }
     });
