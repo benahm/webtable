@@ -40,7 +40,7 @@
 <script src="../scripts/controllers/modalController.js"></script>
 <script src="../scripts/controllers/pageController.js"></script>
 <script src="../scripts/controllers/commandController.js"></script>
-<script src="../scripts/controllers/tableContorller.js"></script>
+<script src="../scripts/controllers/tableController.js"></script>
 <script src="../scripts/app.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 <script>
@@ -54,7 +54,7 @@
 
 <style>
 
-    input[type="text"] {
+    input{
         width: 100%;
         text-align: center;
     }
@@ -87,21 +87,28 @@
         width: 1300px;
     }
 
-    #webtable {
+    #webtable-border {
         position: absolute;
         overflow-x: scroll;
+        width: 1500px;
+        height: 470px;
+        border: solid 2px #000000;
+    }
+
+    #webtable {
+        position: absolute;
         width: 1300px;
         height: 450px;
     }
 
     .pagination {
         position: absolute;
-        top: 470px;
+        top: 490px;
     }
 
     #footer {
         position: absolute;
-        top: 600px;
+        top: 620px;
     }
 
     .hook {

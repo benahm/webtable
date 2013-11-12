@@ -102,8 +102,9 @@ angular.module("tableController", ["data", "configuration"])
             var percent=2;
             for(var i= 0;i<index;i++)
                 percent+=$scope.datas.head[i].columnWidth;
+            var webtableWidth=angular.element("#webtable").width();
             angular.element("#hook-"+index).css({
-                left:percent*1300/100
+                left:percent*webtableWidth/100
             })
         };
 

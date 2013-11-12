@@ -49,9 +49,6 @@ directivesModule.directive('doFocus', function ($timeout) {
                 // Prevent default dragging of selected content
                 event.preventDefault();
                 startX = event.pageX;
-                element.css({
-                    backgroundColor: "gray"
-                });
                 $document.on('mousemove', mousemove);
                 $document.on('mouseup', mouseup);
             });
@@ -64,12 +61,10 @@ directivesModule.directive('doFocus', function ($timeout) {
             }
             // on mouse up
             function mouseup() {
-                element.css({
-                    backgroundColor: "gray"
-                });
-                var move = (x - startX) / 1300 * 100
+                var webtableWidth=angular.element("#webtable").width();
+                var movePercentage = (x - startX) / webtableWidth * 100
                 // emit a colResize event
-                scope.$emit("colResize", scope.index, move);
+                scope.$emit("colResize", scope.index, movePercentage);
                 // unbind
                 $document.unbind('mousemove', mousemove);
                 $document.unbind('mouseup', mouseup);

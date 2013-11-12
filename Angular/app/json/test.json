@@ -13,7 +13,7 @@
         },
         {
             "name": "age",
-            "type": "text",
+            "type": "date",
             "constraints": {}
         },
         {
