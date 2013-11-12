@@ -5,7 +5,7 @@
 angular.module("inputController", ["configuration"])
     .controller("inputController", function ($scope, $rootScope, constraintFactory) {
         $scope.test="hello world";
-        $scope.type="text";
+        $scope.type="bool";
         var tablescope = $scope.$parent;// get scope of tableController
 
 
@@ -20,13 +20,11 @@ angular.module("inputController", ["configuration"])
             tablescope.datas.body[i][j]=d;
             console.log(d)
         }
-
-        $scope.queryCellChanged=function(d,i){
-            tablescope.query_record[i]=d;
-        }
-
-        $scope.newCellChanged=function(d,i){
-            tablescope.new_record[i]=d;
+        $scope.nqCellChanged=function(d,n,q,i){
+            console.log(d,n,q,i);
+            if(n){
+                tablescope.new_record[i]=d;
+            }else tablescope.query_record[i]=d;
         }
 
     });

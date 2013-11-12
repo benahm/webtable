@@ -127,7 +127,7 @@ $.fn.checkbox = function(parameters) {
         },
 
         toggle: function(event) {
-          module.verbose('Determining new checkbox state');
+          module.verbose('Determining new-query checkbox state');
           if( module.is.disabled() ) {
             module.enable();
           }

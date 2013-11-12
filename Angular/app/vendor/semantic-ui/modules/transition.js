@@ -634,7 +634,7 @@ $.fn.transition.settings = {
   animation   : 'fade',
   duration    : '700ms',
 
-  // new animations will occur after previous ones
+  // new-query animations will occur after previous ones
   queue       : true,
 
   className   : {

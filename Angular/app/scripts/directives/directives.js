@@ -10,8 +10,8 @@ var directivesModule = angular.module("directivesModule", ["tableController"]);
 directivesModule.directive('doFocus',function ($timeout) {
     return {
         link: function (scope, element, attrs) {
-            element.on("change",function(){
-               console.log("changed");
+            element.on("change", function () {
+                console.log("changed");
             });
             // watch the value focused on the attrs.doFocus
             scope.$watch(attrs.doFocus, function (value) {
@@ -44,61 +44,49 @@ directivesModule.directive('doFocus',function ($timeout) {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell.html',
             replace: true,
-            scope:true
+            scope: true
         };
     }).directive('webtableCellNew',function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell-new.html',
             replace: true,
-            scope:true
+            scope: true
         };
     }).directive('webtableCellQuery',function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell-query.html',
             replace: true,
-            scope:true
+            scope: true
         };
     }).directive("webtable",function () {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable.html'
         }
-    }).directive("inputText", function () {
+    }).directive("inputText",function () {
         return {
             restrict: 'AE',
             templateUrl: 'templates/inputs/cell/input-text.html',
             replace: true
         }
-    }).directive("inputCheckbox", function () {
+    }).directive("inputCheckbox",function () {
         return {
             restrict: 'AE',
             templateUrl: 'templates/inputs/cell/input-checkbox.html',
             replace: true
         }
-    }).directive("inputTextNew", function () {
+    }).directive("inputTextNq",function () {
         return {
             restrict: 'AE',
-            templateUrl: 'templates/inputs/new/input-text.html',
+            templateUrl: 'templates/inputs/new-query/input-text.html',
             replace: true
         }
-    }).directive("inputCheckboxNew", function () {
+    }).directive("inputCheckboxNq", function () {
         return {
             restrict: 'AE',
-            templateUrl: 'templates/inputs/new/input-checkbox.html',
-            replace: true
-        }
-    }).directive("inputTextQuery", function () {
-        return {
-            restrict: 'AE',
-            templateUrl: 'templates/inputs/query/input-text.html',
-            replace: true
-        }
-    }).directive("inputCheckboxQuery", function () {
-        return {
-            restrict: 'AE',
-            templateUrl: 'templates/inputs/query/input-checkbox.html',
+            templateUrl: 'templates/inputs/new-query/input-checkbox.html',
             replace: true
         }
     });

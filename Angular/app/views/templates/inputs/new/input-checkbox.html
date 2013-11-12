@@ -1,8 +1,0 @@
-<div>
-    <div class="cell" tabindex="{{tabindex(innerindex,-1)}}" ng-show="!focused"
-         ng-click="focused=true" ng-focus="focused=true">{{ d==true?'oui':'non' }}
-    </div>
-    <input tabindex="{{tabindex(innerindex,-1)}}" type="checkbox"
-           ng-change="newCellChanged(d,innerindex)"
-           ng-show="focused" ng-model="d" ng-blur="focused=false" do-focus="focused">
-</div>

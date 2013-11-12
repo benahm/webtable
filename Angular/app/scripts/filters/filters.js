@@ -17,7 +17,7 @@ filtersModule
         for(var j=0;j<rows.length;j++){
             var i,row=rows[j];
             for(i=0;i<row.length; i++){
-                if((row[i]+"").toLowerCase().indexOf(query_record[i].toLowerCase())==-1){
+                if((row[i]+"").toLowerCase().indexOf((query_record[i]+"").toLowerCase())==-1){
                     break;
                 }
             }

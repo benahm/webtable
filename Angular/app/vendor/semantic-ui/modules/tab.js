@@ -670,7 +670,7 @@
     maxDepth        : 25,
     // dont load content on first load
     ignoreFirstLoad : false,
-    // load tab content new every tab click
+    // load tab content new-query every tab click
     alwaysRefresh   : false,
     // cache the content requests to pull locally
     cache           : true,

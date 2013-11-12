@@ -496,13 +496,13 @@ $.fn.popup = function(parameters) {
             // check if is offstage
             offstagePosition = module.get.offstagePosition();
 
-            // recursively find new positioning
+            // recursively find new-query positioning
             if(offstagePosition) {
               module.debug('Element is outside boundaries', offstagePosition);
               if(searchDepth < settings.maxSearchDepth) {
                 position = module.get.nextPosition(position);
                 searchDepth++;
-                module.debug('Trying new position', position);
+                module.debug('Trying new-query position', position);
                 return module.set.position(position);
               }
               else {
