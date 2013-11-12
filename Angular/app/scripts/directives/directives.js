@@ -43,25 +43,27 @@ directivesModule.directive('doFocus', function ($timeout) {
  */
     .directive('draggable',function ($document) {
         return function (scope, element, attr) {
-            var startX = 0, x = 0;
+            var startX = 0, x = 0,
+                webtable_border = angular.element("#webtable-border");
             // on mouse down
             element.on('mousedown', function (event) {
                 // Prevent default dragging of selected content
                 event.preventDefault();
-                startX = event.pageX;
+                startX = event.pageX + webtable_border.scrollLeft();
                 $document.on('mousemove', mousemove);
                 $document.on('mouseup', mouseup);
             });
             // on mouse move
             function mousemove(event) {
-                x = event.pageX;
+
+                x = event.pageX + webtable_border.scrollLeft();
                 element.css({
                     left: x + 'px'
                 });
             }
             // on mouse up
             function mouseup() {
-                var webtableWidth=angular.element("#webtable").width();
+                var webtableWidth = angular.element("#webtable").width();
                 var movePercentage = (x - startX) / webtableWidth * 100
                 // emit a colResize event
                 scope.$emit("colResize", scope.index, movePercentage);
