@@ -78,13 +78,13 @@
         <tbody>
         <tr ng-show="show_query_record" class="success">
             <td>{{'>'}}</td>
-            <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index;outerindex=-1">
+            <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index">
                 <div webtable-cell-query></div>
             </td>
         </tr>
         <tr ng-show="new_record" class="success">
             <td>{{'>'}}</td>
-            <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index;outerindex=-1">
+            <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
                 <div webtable-cell-new></div>
             </td>
         </tr>

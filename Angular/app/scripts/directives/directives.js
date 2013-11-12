@@ -68,13 +68,37 @@ directivesModule.directive('doFocus',function ($timeout) {
     }).directive("inputText", function () {
         return {
             restrict: 'AE',
-            templateUrl: 'templates/inputs/input-text.html',
+            templateUrl: 'templates/inputs/cell/input-text.html',
             replace: true
         }
     }).directive("inputCheckbox", function () {
         return {
             restrict: 'AE',
-            templateUrl: 'templates/inputs/input-checkbox.html',
+            templateUrl: 'templates/inputs/cell/input-checkbox.html',
+            replace: true
+        }
+    }).directive("inputTextNew", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new/input-text.html',
+            replace: true
+        }
+    }).directive("inputCheckboxNew", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new/input-checkbox.html',
+            replace: true
+        }
+    }).directive("inputTextQuery", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/query/input-text.html',
+            replace: true
+        }
+    }).directive("inputCheckboxQuery", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/query/input-checkbox.html',
             replace: true
         }
     });

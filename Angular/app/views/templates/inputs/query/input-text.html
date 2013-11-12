@@ -1,0 +1,11 @@
+<div>
+    <div class="cell" tabindex="{{tabindex(innerindex,-1)}}" ng-show="!focused && !d"
+         ng-focus="focused=true"> &lt;&lt;Enter value
+        here.&gt;&gt; </div>
+    <div class="cell" tabindex="{{tabindex(innerindex,-1)}}" ng-show="!focused && d"
+         ng-click="focused=true" ng-focus="focused=true">{{ d }}
+    </div>
+    <input tabindex="{{tabindex(innerindex,-1)}}" type="text"
+           ng-change="queryCellChanged(d,innerindex)"
+           ng-show="focused" ng-model="d" ng-blur="focused=false" do-focus="focused">
+</div>

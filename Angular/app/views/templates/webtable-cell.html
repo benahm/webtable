@@ -1,6 +1,13 @@
 <div>
     <div ng-controller="inputController">
-        <div input-text></div>
+        <div ng-switch="type">
+            <div ng-switch-when="bool">
+                <div input-checkbox></div>
+            </div>
+            <div ng-switch-when="text">
+                <div input-text></div>
+            </div>
+        </div>
     </div>
 </div>
 

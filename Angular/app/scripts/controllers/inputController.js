@@ -5,14 +5,9 @@
 angular.module("inputController", ["configuration"])
     .controller("inputController", function ($scope, $rootScope, constraintFactory) {
         $scope.test="hello world";
+        $scope.type="text";
         var tablescope = $scope.$parent;// get scope of tableController
-        var binds={
-            text:"text",
-            bool:"checkbox",
-            numeric:"",
-            date:"date",
-            currency:"currency"
-        }
+
 
         $scope.tabindex=function(i,j){
             return i+1+(j+1)*$scope.datas.head.length;

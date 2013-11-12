@@ -1,8 +1,13 @@
 <div>
     <div ng-controller="inputController">
-        <div class="cell" tabindex="{{tabindex(innerindex,outerindex)}}" ng-show="!focused && !d"
-             ng-focus="focused=true"> &lt;&lt;Enter value
-            here.&gt;&gt; </div>
-        <div input-text></div>
+
+        <div ng-switch="type">
+            <div ng-switch-when="bool">
+                <div input-checkbox-query></div>
+            </div>
+            <div ng-switch-when="text">
+                <div input-text-query></div>
+            </div>
+        </div>
     </div>
 </div>
