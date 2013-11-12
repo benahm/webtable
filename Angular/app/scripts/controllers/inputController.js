@@ -5,7 +5,7 @@
 angular.module("inputController", ["configuration"])
     .controller("inputController", function ($scope, $rootScope, constraintFactory) {
         $scope.test="hello world";
-        $scope.type="date";
+        $scope.type="text";
         var tablescope = $scope.$parent;// get scope of tableController
 
 
@@ -13,6 +13,9 @@ angular.module("inputController", ["configuration"])
             return i+1+(j+1)*$scope.datas.head.length;
         }
 
+        $scope.inputType=function(columnIndex){
+            return $scope.datas.head[columnIndex].type
+        }
 
         /* apply changes */
 

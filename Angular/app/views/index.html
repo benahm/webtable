@@ -58,11 +58,17 @@
         width: 100%;
         text-align: center;
     }
+
+    .table {
+        position: absolute;
+    }
+
     .table > tbody > tr > td {
         padding: 0;
         text-align: center;
         height: 26px;
     }
+
     .table > thead > tr > th {
         text-align: center;
         -webkit-user-select: none;
@@ -70,12 +76,43 @@
         -ms-user-select: none;
         user-select: none;
     }
-    .cell{
+
+    .cell {
         height: 25px;
         text-align: center;
     }
 
+    #webtable-frame {
+        position: absolute;
+        width: 1300px;
+    }
 
+    #webtable {
+        position: absolute;
+        overflow-x: scroll;
+        width: 1300px;
+        height: 450px;
+    }
+
+    .pagination {
+        position: absolute;
+        top: 470px;
+    }
+
+    #footer {
+        position: absolute;
+        top: 600px;
+    }
+
+    .hook {
+        top: 0;
+        width: 2px;
+        height: 38px;
+        z-index: 5;
+        position: absolute;
+        cursor: col-resize;
+        background-color: #808080;
+    }
 
 </style>
 </html>

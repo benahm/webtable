@@ -10,9 +10,12 @@ angular.module("tableController", ["data", "configuration"])
         $scope.message = "hello,world"
         $scope.datas = {};
 
+
         //get the data from the server
         dataFactory.getData("../json/test.json").success(function (data) {
             $scope.datas = data;
+            for (var i = 0; i < $scope.datas.head.length; i++)
+                $scope.datas.head[i].columnWidth = 98 / $scope.datas.head.length;
         })
 
         /**
@@ -77,10 +80,54 @@ angular.module("tableController", ["data", "configuration"])
             return $scope.datas.body.indexOf(record);
         };
 
+        $scope.columnWidth = function (index) {
+            return $scope.datas.head[index].columnWidth;
+        };
 
         $scope.makeArray = function (num) {
             return new Array(num);
-        }
+        };
+        $scope.thWidth = function (index) {
+            return {width: $scope.datas.head[index].columnWidth + '%'}
+        };
 
+        $scope.hookLeft = function (index) {
+            var percent=2;
+            for(var i= 0;i<index;i++)
+                percent+=$scope.datas.head[i].columnWidth;
+            return {left: percent+ '%'}
+        };
 
+        $scope.normalize=function(index){
+            var percent=2;
+            for(var i= 0;i<index;i++)
+                percent+=$scope.datas.head[i].columnWidth;
+            angular.element("#hook-"+index).css({
+                left:percent*1300/100
+            })
+        };
+
+        $scope.$on("colResize", function (event, index, move) {
+            // apply the move to columns width
+            $scope.datas.head[index].columnWidth = $scope.datas.head[index].columnWidth - move;
+            $scope.datas.head[index - 1].columnWidth = $scope.datas.head[index - 1].columnWidth + move;
+
+            var total=0;
+            for (var i = 0; i < $scope.datas.head.length; i++)
+                total+=$scope.datas.head[i].columnWidth;
+            console.log("total-->",total)
+
+            //apply the width on the column index directly with css
+            angular.element("#head-"+index).css({
+                width: $scope.datas.head[index].columnWidth + '%'
+            })
+            //apply the width on the column index-1 directly with css
+            angular.element("#head-"+(index-1)).css({
+                width: $scope.datas.head[index-1].columnWidth+ '%'
+            })
+
+            //?????
+            $scope.normalize(index);
+
+        })
     });

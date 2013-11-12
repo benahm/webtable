@@ -6,16 +6,14 @@
  * directives of the project
  * @type {*}
  */
-var directivesModule = angular.module("directivesModule", ["tableController"]);
-directivesModule.directive('doFocus',function ($timeout) {
+var directivesModule = angular.module("directivesModule", ["configuration"]);
+directivesModule.directive('doFocus', function ($timeout) {
     return {
         link: function (scope, element, attrs) {
             element.on("change", function () {
-                console.log("changed");
             });
             // watch the value focused on the attrs.doFocus
             scope.$watch(attrs.doFocus, function (value) {
-                console.log(scope)
                 if (value === true) {
                     element[0].focus(); // focus on the element
 
@@ -39,7 +37,45 @@ directivesModule.directive('doFocus',function ($timeout) {
             });
         }
     };
-}).directive('webtableCell',function () {
+})
+/**
+ * draggable directive
+ */
+    .directive('draggable',function ($document) {
+        return function (scope, element, attr) {
+            var startX = 0, x = 0;
+            // on mouse down
+            element.on('mousedown', function (event) {
+                // Prevent default dragging of selected content
+                event.preventDefault();
+                startX = event.pageX;
+                element.css({
+                    backgroundColor: "gray"
+                });
+                $document.on('mousemove', mousemove);
+                $document.on('mouseup', mouseup);
+            });
+            // on mouse move
+            function mousemove(event) {
+                x = event.pageX;
+                element.css({
+                    left: x + 'px'
+                });
+            }
+            // on mouse up
+            function mouseup() {
+                element.css({
+                    backgroundColor: "gray"
+                });
+                var move = (x - startX) / 1300 * 100
+                // emit a colResize event
+                scope.$emit("colResize", scope.index, move);
+                // unbind
+                $document.unbind('mousemove', mousemove);
+                $document.unbind('mouseup', mouseup);
+            }
+        }
+    }).directive('webtableCell',function () {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell.html',
@@ -89,7 +125,7 @@ directivesModule.directive('doFocus',function ($timeout) {
             templateUrl: 'templates/inputs/new-query/input-text.html',
             replace: true
         }
-    }).directive("inputCheckboxNq", function () {
+    }).directive("inputCheckboxNq",function () {
         return {
             restrict: 'AE',
             templateUrl: 'templates/inputs/new-query/input-checkbox.html',

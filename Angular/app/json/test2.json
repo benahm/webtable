@@ -5,16 +5,53 @@
     "head": [
         {
             "name": "name",
+            "type":"text",
             "constraints": {
                 "required":"Name is required"
             }
         },
         {
             "name": "age",
+            "type":"text",
             "constraints": {}
         },
         {
             "name": "gender",
+            "type":"bool",
+            "constraints": {}
+        },
+        {
+            "name": "first name",
+            "type":"text",
+            "constraints": {}
+        }
+        ,
+        {
+            "name": "first2 ",
+            "type":"text",
+            "constraints": {}
+        }
+        ,
+        {
+            "name": "first3 ",
+            "type":"text",
+            "constraints": {}
+        },
+        {
+            "name": "first ",
+            "type":"text",
+            "constraints": {}
+        }
+        ,
+        {
+            "name": "first2 ",
+            "type":"text",
+            "constraints": {}
+        }
+        ,
+        {
+            "name": "first3 ",
+            "type":"text",
             "constraints": {}
         }
     ],
@@ -26,113 +63,18 @@
             ,
 
             "bo"
-
-        ],
-        [
-
-            "Jessi"
             ,
-
-            30
+            "dupont"
             ,
-
-            "girl"
-
-        ],
-        [
-
-            "Johann"
+            "dupont"
             ,
-
-            28
+            "dupont"
             ,
-
-            "girl"
-
-        ],
-        [
-
-            "Jo"
+            "dupont"
             ,
-
-            15
+            "dupont"
             ,
-
-            "girl"
-
-        ],
-        [
-
-            "Mary"
-            ,
-
-            28
-            ,
-
-            "girl"
-
-        ],
-        [
-
-            "Pete"
-            ,
-
-            95
-            ,
-
-            "boy"
-
-        ],
-        [
-
-            "Sebastian"
-            ,
-
-            50
-            ,
-
-            "boy"
-
-        ],
-        [
-
-            "Erik"
-            ,
-
-            27
-            ,
-            "girl"
-        ],
-        [
-            "Patric"
-            ,
-
-            40
-            ,
-
-            "boy"
-        ],
-        [
-
-            "Samantha"
-            ,
-
-            60
-            ,
-
-            "girl"
-
-        ]
-        ,
-        [
-
-            "Samanth"
-            ,
-
-            60
-            ,
-
-            "girl"
+            "dupont"
 
         ]
 

@@ -42,7 +42,6 @@ angular.module("commandController", ["constraint", "configuration"])
 
         /* Copy Record */
         $scope.copyRecord = function () {
-            console.log($scope.selectedRecordValue)
             if ($scope.selectedRecordValue !== -1) {
                 var record = $scope.datas.body[$scope.selectedRecordValue];
                 var copyOfRecord = (JSON.parse(JSON.stringify(record)));

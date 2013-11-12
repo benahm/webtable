@@ -16,6 +16,8 @@ angular.module("pageController", ["data","configuration"])
             //get the data from the server
             dataFactory.getData("../json/test2.json").success(function (data) {
                 $scope.$parent.datas = data;
+                for(var i= 0;i<$scope.datas.head.length;i++)
+                    $scope.$parent.datas.head[i].columnWidth=98/$scope.datas.head.length;
                 console.log("hello")
             })
         };
