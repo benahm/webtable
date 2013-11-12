@@ -5,7 +5,7 @@
 angular.module("inputController", ["configuration"])
     .controller("inputController", function ($scope, $rootScope, constraintFactory) {
         $scope.test="hello world";
-        $scope.type="bool";
+        $scope.type="date";
         var tablescope = $scope.$parent;// get scope of tableController
 
 

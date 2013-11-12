@@ -77,6 +77,12 @@ directivesModule.directive('doFocus',function ($timeout) {
             templateUrl: 'templates/inputs/cell/input-checkbox.html',
             replace: true
         }
+    }).directive("inputDate",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/cell/input-date.html',
+            replace: true
+        }
     }).directive("inputTextNq",function () {
         return {
             restrict: 'AE',
@@ -87,6 +93,12 @@ directivesModule.directive('doFocus',function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/inputs/new-query/input-checkbox.html',
+            replace: true
+        }
+    }).directive("inputDateNq", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new-query/input-date.html',
             replace: true
         }
     });
