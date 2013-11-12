@@ -69,21 +69,20 @@
         <tbody>
         <tr ng-show="show_query_record" class="success">
             <td>{{'>'}}</td>
-            <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index">
-                <div webtable-cell-nq datacell="d" index="innerindex" nq="query_record"></div>
+            <td ng-repeat="d in query_record track by $index" ng-init="index=$index">
+                <div webtable-cell-query ></div>
             </td>
         </tr>
         <tr ng-show="new_record" class="success">
             <td>{{'>'}}</td>
-            <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
-                <div webtable-cell-nq datacell="d" index="innerindex" nq="new_record"></div>
+            <td ng-repeat="d in new_record track by $index" ng-init="index=$index">
+                <div webtable-cell-new ></div>
             </td>
         </tr>
         <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort" ng-class="activeRecord(outerindex)">
             <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'>':'-'}}</td>
             <td ng-repeat="d in data track by $index " ng-init="innerindex=$index"  style="width: {{100/datas.head.length}}%" >
-                <div webtable-cell datacell="d" innerindex="innerindex" outerindex="outerindex"
-                     maxouterindex="datas.head.length"></div>
+               <div webtable-cell ></div>
             </td>
         </tr>
         <tr ng-repeat="i in makeArray(15-datas.body.length) track by $index">

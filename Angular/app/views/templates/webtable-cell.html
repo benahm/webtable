@@ -1,10 +1,10 @@
 <div>
     <div ng-controller="inputController">
-        <div class="cell" tabindex="{{innerindex+(outerindex+1)*(maxouterindex)}}" ng-show="!focused"
+        <div class="cell" tabindex="{{innerindex+(outerindex+1)*(datas.head.length)}}" ng-show="!focused"
              ng-click="focused=true" ng-focus="focused=true">{{ d }}
         </div>
-
-        <input tabindex="{{innerindex+(outerindex+1)*(maxouterindex)}}" type="text" ng-change="cellChanged()"
+        <input tabindex="{{innerindex+(outerindex+1)*(datas.head.length)}}" type="text"
+               ng-change="cellChanged(d,outerindex,innerindex)"
                ng-show="focused" ng-model="d" ng-blur="focused=false" do-focus="focused">
     </div>
 </div>
