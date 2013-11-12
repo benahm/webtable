@@ -43,8 +43,9 @@ directivesModule.directive('doFocus', function ($timeout) {
  */
     .directive('draggable',function ($document) {
         return function (scope, element, attr) {
-            var startX = 0, x = 0,
-                webtable_border = angular.element("#webtable-border");
+            var startX = 0, x = 0, movePercentage = 0,
+                webtable_border = angular.element("#webtable-border"),
+                webtable = angular.element("#webtable");
             // on mouse down
             element.on('mousedown', function (event) {
                 // Prevent default dragging of selected content
@@ -55,16 +56,15 @@ directivesModule.directive('doFocus', function ($timeout) {
             });
             // on mouse move
             function mousemove(event) {
-
                 x = event.pageX + webtable_border.scrollLeft();
                 element.css({
                     left: x + 'px'
                 });
             }
+
             // on mouse up
             function mouseup() {
-                var webtableWidth = angular.element("#webtable").width();
-                var movePercentage = (x - startX) / webtableWidth * 100
+                movePercentage = (x - startX) / webtable.width() * 100
                 // emit a colResize event
                 scope.$emit("colResize", scope.index, movePercentage);
                 // unbind

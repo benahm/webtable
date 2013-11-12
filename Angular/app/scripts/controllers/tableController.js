@@ -92,43 +92,57 @@ angular.module("tableController", ["data", "configuration"])
         };
 
         $scope.hookLeft = function (index) {
-            var percent=2;
-            for(var i= 0;i<index;i++)
-                percent+=$scope.datas.head[i].columnWidth;
-            return {left: percent+ '%'}
+            var percent = 2;
+            for (var i = 0; i < index; i++)
+                percent += $scope.datas.head[i].columnWidth;
+            return {left: percent + '%'}
         };
 
-        $scope.normalize=function(index){
-            var percent=2;
-            for(var i= 0;i<index;i++)
-                percent+=$scope.datas.head[i].columnWidth;
-            var webtableWidth=angular.element("#webtable").width();
-            angular.element("#hook-"+index).css({
-                left:percent*webtableWidth/100
+        $scope.normalize = function (index) {
+            var percent = 2;
+            for (var i = 0; i < index; i++)
+                percent += $scope.datas.head[i].columnWidth;
+            var webtableWidth = angular.element("#webtable").width();
+            angular.element("#hook-" + index).css({
+                left: percent * webtableWidth / 100
             })
         };
 
         $scope.$on("colResize", function (event, index, move) {
             // apply the move to columns width
-            $scope.datas.head[index].columnWidth = $scope.datas.head[index].columnWidth - move;
-            $scope.datas.head[index - 1].columnWidth = $scope.datas.head[index - 1].columnWidth + move;
-
-            var total=0;
-            for (var i = 0; i < $scope.datas.head.length; i++)
-                total+=$scope.datas.head[i].columnWidth;
-            console.log("total-->",total)
+            $scope.datas.head[index].columnWidth -= move;
+            $scope.datas.head[index - 1].columnWidth += move;
+            checkMinColumnWidth(index);
 
             //apply the width on the column index directly with css
-            angular.element("#head-"+index).css({
+            angular.element("#head-" + index).css({
                 width: $scope.datas.head[index].columnWidth + '%'
             })
             //apply the width on the column index-1 directly with css
-            angular.element("#head-"+(index-1)).css({
-                width: $scope.datas.head[index-1].columnWidth+ '%'
+            angular.element("#head-" + (index - 1)).css({
+                width: $scope.datas.head[index - 1].columnWidth + '%'
             })
 
             //?????
             $scope.normalize(index);
 
         })
+
+        /**
+         * checkMinColumnWidth ensure a min column width
+         * @param index : index of the resize column
+         */
+        function checkMinColumnWidth(index) {
+            var minColumnWidth = 10;
+            var diff = $scope.datas.head[index].columnWidth - minColumnWidth
+            if (diff < 0) {
+                $scope.datas.head[index].columnWidth = minColumnWidth;
+                $scope.datas.head[index - 1].columnWidth += diff;
+            }
+            diff = $scope.datas.head[index - 1].columnWidth - minColumnWidth
+            if (diff < 0) {
+                $scope.datas.head[index - 1].columnWidth = minColumnWidth;
+                $scope.datas.head[index].columnWidth += diff;
+            }
+        }
     });
