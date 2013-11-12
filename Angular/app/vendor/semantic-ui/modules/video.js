@@ -88,7 +88,7 @@ $.fn.video = function(parameters) {
           ;
         },
 
-        // sets new video
+        // sets new-query video
         change: function(source, id, url) {
           module.debug('Changing video to ', source, id, url);
           $module

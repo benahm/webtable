@@ -6,10 +6,12 @@
  * directives of the project
  * @type {*}
  */
-var directivesModule = angular.module("directivesModule", ["tableController"]);
-directivesModule.directive('doFocus',function ($timeout) {
+var directivesModule = angular.module("directivesModule", ["configuration"]);
+directivesModule.directive('doFocus', function ($timeout) {
     return {
         link: function (scope, element, attrs) {
+            element.on("change", function () {
+            });
             // watch the value focused on the attrs.doFocus
             scope.$watch(attrs.doFocus, function (value) {
                 if (value === true) {
@@ -17,53 +19,122 @@ directivesModule.directive('doFocus',function ($timeout) {
 
                     $timeout(function () {
                         var tablescope = $("#webtable").scope();
-                        if (!scope.nq) {
+                        console.log(scope.query_record, scope.new_record)
+                        if (!scope.query_record) {
                             tablescope.show_query_record = false;
                         }
                         if (scope.outerindex != undefined) {
                             tablescope.selectedRecordValue = scope.outerindex;
                         }
-                        if (!scope.nq) {
-                            if (tablescope.new_record) {
-                                /*tablescope.datas.body.unshift(tablescope.new_record);
-                                 tablescope.new_record = undefined;
-                                 tablescope.show_new_record = false;*/
+                        if (tablescope.new_record) {
+                            /*tablescope.datas.body.unshift(tablescope.new_record);
+                             tablescope.new_record = undefined;
+                             tablescope.show_new_record = false;*/
 
-                            }
                         }
                     });
                 }
             });
         }
     };
-}).directive('webtableCell',function () {
-        return {
-            restrict: 'AE',
-            templateUrl: 'webtable-cell.html',
-            scope: {
-                d: "=datacell",
-                innerindex: "=",
-                outerindex: "=",
-                maxouterindex: "="
-            },
-            replace: true
-        };
-    }).directive('webtableCellNq', function () {
-        return {
-            restrict: 'AE',
-            templateUrl: 'webtable-cell-nq.html',
-            scope: {
-                d: "=datacell",
-                index: "=",
-                nq: "@"
-            },
-            replace: true,
-            link:function(scope, element, attrs){
-                scope.cellChanged=function(){
-                    var tablescope = $("#webtable").scope();
-                    if(attrs.nq="new_record")
-                        tablescope.new_record[scope.index]=scope.d;
-                }
+})
+/**
+ * draggable directive
+ */
+    .directive('draggable',function ($document) {
+        return function (scope, element, attr) {
+            var startX = 0, x = 0;
+            // on mouse down
+            element.on('mousedown', function (event) {
+                // Prevent default dragging of selected content
+                event.preventDefault();
+                startX = event.pageX;
+                element.css({
+                    backgroundColor: "gray"
+                });
+                $document.on('mousemove', mousemove);
+                $document.on('mouseup', mouseup);
+            });
+            // on mouse move
+            function mousemove(event) {
+                x = event.pageX;
+                element.css({
+                    left: x + 'px'
+                });
             }
+            // on mouse up
+            function mouseup() {
+                element.css({
+                    backgroundColor: "gray"
+                });
+                var move = (x - startX) / 1300 * 100
+                // emit a colResize event
+                scope.$emit("colResize", scope.index, move);
+                // unbind
+                $document.unbind('mousemove', mousemove);
+                $document.unbind('mouseup', mouseup);
+            }
+        }
+    }).directive('webtableCell',function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/webtable-cell.html',
+            replace: true,
+            scope: true
         };
+    }).directive('webtableCellNew',function ($timeout) {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/webtable-cell-new.html',
+            replace: true,
+            scope: true
+        };
+    }).directive('webtableCellQuery',function ($timeout) {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/webtable-cell-query.html',
+            replace: true,
+            scope: true
+        };
+    }).directive("webtable",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/webtable.html'
+        }
+    }).directive("inputText",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/cell/input-text.html',
+            replace: true
+        }
+    }).directive("inputCheckbox",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/cell/input-checkbox.html',
+            replace: true
+        }
+    }).directive("inputDate",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/cell/input-date.html',
+            replace: true
+        }
+    }).directive("inputTextNq",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new-query/input-text.html',
+            replace: true
+        }
+    }).directive("inputCheckboxNq",function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new-query/input-checkbox.html',
+            replace: true
+        }
+    }).directive("inputDateNq", function () {
+        return {
+            restrict: 'AE',
+            templateUrl: 'templates/inputs/new-query/input-date.html',
+            replace: true
+        }
     });

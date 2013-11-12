@@ -5,8 +5,8 @@
 /**
  * commands management
  */
-angular.module("commandController", ["constraint"])
-    .controller("commandController", function ($scope, constraintFactory) {
+angular.module("commandController", ["constraint", "configuration"])
+    .controller("commandController", function ($scope, $rootScope, constraintFactory) {
         /**
          * Commands
          */
@@ -36,17 +36,17 @@ angular.module("commandController", ["constraint"])
                 tablescope.datas.body.unshift($scope.new_record);
                 tablescope.new_record = undefined;
                 tablescope.show_new_record = false;
-            } else $scope.modal.displayMessages(check);
+                tablescope.selectedRecordValue = 0
+            } else $rootScope.$broadcast("errors", check);
         }
 
         /* Copy Record */
         $scope.copyRecord = function () {
-            console.log($scope.selectedRecordValue)
             if ($scope.selectedRecordValue !== -1) {
                 var record = $scope.datas.body[$scope.selectedRecordValue];
                 var copyOfRecord = (JSON.parse(JSON.stringify(record)));
                 tablescope.datas.body.splice($scope.selectedRecordValue, 0, copyOfRecord);
-            } else $scope.modal.display("No record selected!");
+            } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
         /* Delete Record */
@@ -56,7 +56,7 @@ angular.module("commandController", ["constraint"])
                 if (index > 0)
                     tablescope.selectedRecordValue--;
                 tablescope.datas.body.splice(index, 1);
-            } else $scope.modal.display("No record selected!");
+            } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
         /* Query Record */
@@ -91,14 +91,14 @@ angular.module("commandController", ["constraint"])
             var index = $scope.selectedRecordValue;
             if (index != -1) {
                 var changed = false // TODO
-                $scope.modal.display(changed ? "The record has been modified." : "The record has not been modified yet.");
-            } else $scope.modal.display("No record selected!");
+                $rootScope.$broadcast("inform", changed ? "The record has been modified." : "The record has not been modified yet.");
+            } else $rootScope.$broadcast("warning", "No record selected!");// display warning
         }
 
         /* Count Records */
         $scope.countRecords = function () {
-            var count = $scope.datas.body.length;
-            $scope.modal.display("Total: " + count + " records.");
+            var count = $scope.datas.info.countRecords;
+            $rootScope.$broadcast("inform", "Total: " + count + " records.");// display info
         }
 
         //TODO config commands
@@ -129,50 +129,6 @@ angular.module("commandController", ["constraint"])
             },
             clearQueryRecord: function () {
                 return !$scope.query_record
-            }
-        }
-
-
-        /* modal management */
-        $scope.modal = {
-            isVisible: "hide",
-            message: "",
-            /**
-             * display a message
-             * @param message to display
-             * @param callback callback to execute on click on the button OK
-             */
-            display: function (message, callback) {
-                $scope.modal.message = message;
-                $scope.modal.isVisible = "show";
-                if (typeof callback === "function")
-                    $scope.modal.ok = callback;
-            },
-            /**
-             * display messages return from constraints check
-             * @param data data to display
-             * @param callback callback to execute on click on the button OK
-             */
-            displayMessages: function (data, callback) {
-                $scope.modal.data = {
-                    nameColumn: $scope.datas.head[data.index].name,
-                    messages: data.messages
-                }
-                $scope.modal.isVisible = "show";
-                if (typeof callback === "function")
-                    $scope.modal.ok = callback;
-            },
-            /**
-             * close the modal
-             */
-            close: function () {
-                $scope.modal.isVisible = "hide";
-            },
-            /**
-             * default action when click on OK (close the modal)
-             */
-            ok: function () {
-                $scope.modal.isVisible = "hide";
             }
         }
 

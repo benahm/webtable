@@ -225,7 +225,7 @@ $.fn.shape = function(parameters) {
             $module
               .css(newSize)
             ;
-            module.verbose('Resizing stage to fit new content', newSize);
+            module.verbose('Resizing stage to fit new-query content', newSize);
           },
 
           nextSide: function(selector) {
@@ -238,7 +238,7 @@ $.fn.shape = function(parameters) {
           },
 
           active: function() {
-            module.verbose('Setting new side to active', $nextSide);
+            module.verbose('Setting new-query side to active', $nextSide);
             $side
               .removeClass(className.active)
             ;

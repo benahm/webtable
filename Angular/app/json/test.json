@@ -1,21 +1,24 @@
 {
     "info": {
-        "pgNum": 6,
-        "pgTotal": 7
+        "countRecords":28
     },
     "head": [
         {
             "name": "name",
+            "type": "text",
+            "dataBind":"",
             "constraints": {
                 "required":"Name is required"
             }
         },
         {
             "name": "age",
+            "type": "text",
             "constraints": {}
         },
         {
             "name": "gender",
+            "type": "bool",
             "constraints": {}
         }
     ],
