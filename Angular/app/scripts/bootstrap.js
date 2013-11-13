@@ -22,10 +22,8 @@ function webtable(config) {
     if (angular.isDefined(config)) {
         // config = path to json file
         if (angular.isString(config)) {
-            console.log("path")
             var $injector = angular.injector(['ng']);
             var $http = $injector.get('$http'); // get instance of $http
-            console.log($http)
             // ajax request to the json file
             $http({
                 method: "GET",

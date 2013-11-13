@@ -31,6 +31,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 <script src="../scripts/configuration/config.js"></script>
+<script src="../scripts/services/utilsFacotry.js"></script>
 <script src="../scripts/services/dataFactory.js"></script>
 <script src="../scripts/services/constraintFactory.js"></script>
 <script src="../scripts/services/parser.js"></script>
@@ -47,9 +48,7 @@
 <script>
 
     $(document).ready(function () {
-        /* var tdWidth = 100/($("#webtable").scope().datas.head.length+1)+"%";
-         $(this).find('style').append(".table.fixedWidth >tbody>tr>td{padding: 0; width:"+tdWidth+";}");
-         $('body').find('.table').each(function(){$(this).addClass('fixedWidth')});*/
+        //bootstrap the webtable
         webtable("../json/config.json");
     });
 </script>

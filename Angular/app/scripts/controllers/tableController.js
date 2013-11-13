@@ -5,11 +5,15 @@
 /**
  * Table management
  */
-angular.module("tableController", ["data", "configuration"])
-    .controller("tableController", function ($scope, $http, dataFactory, config) {
+angular.module("tableController", ["data", "configuration","utils"])
+    .controller("tableController", function ($scope, $http, dataFactory, config,utilsFactory) {
         $scope.message = "hello,world"
         $scope.datas = {};
 
+        //utils factory
+        $scope.utils=utilsFactory;
+        //config
+        $scope.config=config;
 
         //get the data from the server
         dataFactory.getData("../json/test.json").success(function (data) {
@@ -84,21 +88,21 @@ angular.module("tableController", ["data", "configuration"])
             return config.fields[index].columnWidth;
         };
 
-        $scope.makeArray = function (num) {
-            return new Array(num);
-        };
-
+        /**
+         * ajust width of the webtable
+         * @returns {*}
+         */
         $scope.webtableStyle = function () {
-            var webtable_border = angular.element('#webtable-border');
-            var columnWidth = 98 / config.fields.length;
-            console.log(columnWidth)
+            var webtable_border = angular.element('#webtable-border'),
+                columnWidth = 98 / config.fields.length;
             if (columnWidth < config.minColumnWidth) {
                 return {
-                    width: config.minColumnWidth * config.fields.length * webtable_border.width()
+                    // if column width is less than the minimum column with
+                    width: config.minColumnWidth * config.fields.length * webtable_border.width()/100+"px"
                 }
             }
             return {
-                width: 100
+                width: webtable_border.width() // fit the webtable border
             }
         }
 
@@ -123,8 +127,12 @@ angular.module("tableController", ["data", "configuration"])
             })
         };
 
+        /**
+         * on column resize
+         */
         $scope.$on("colResize", function (event, index, move) {
             // apply the move to columns width
+            console.log(move)
             config.fields[index].columnWidth -= move;
             config.fields[index - 1].columnWidth += move;
             checkMinColumnWidth(index);
@@ -150,15 +158,19 @@ angular.module("tableController", ["data", "configuration"])
         function checkMinColumnWidth(index) {
             var minColumnWidth = config.minColumnWidth;
             var diff = config.fields[index].columnWidth - minColumnWidth
+            console.log(1,diff);
             if (diff < 0) {
                 config.fields[index].columnWidth = minColumnWidth;
                 config.fields[index - 1].columnWidth += diff;
             }
             diff = config.fields[index - 1].columnWidth - minColumnWidth
+            console.log(2,diff);
             if (diff < 0) {
                 config.fields[index - 1].columnWidth = minColumnWidth;
                 config.fields[index].columnWidth += diff;
             }
         }
+
+
 
     });
