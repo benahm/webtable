@@ -44,7 +44,7 @@ angular.module("commandController", ["constraint", "configuration"])
         $scope.copyRecord = function () {
             if ($scope.selectedRecordValue !== -1) {
                 var record = $scope.datas.body[$scope.selectedRecordValue];
-                var copyOfRecord = (JSON.parse(JSON.stringify(record)));
+                var copyOfRecord = angular.copy(record);
                 tablescope.datas.body.splice($scope.selectedRecordValue, 0, copyOfRecord);
             } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
