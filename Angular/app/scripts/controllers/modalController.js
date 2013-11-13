@@ -5,8 +5,8 @@
 /**
  * modal management
  */
-angular.module("modalController", [])
-    .controller("modalController", function ($scope, dataFactory) {
+angular.module("modalController", ["configuration"])
+    .controller("modalController", function ($scope, dataFactory,config) {
 
         var _this = this;
         this.isVisible = "hide";
@@ -72,7 +72,7 @@ angular.module("modalController", [])
         this.errors = function (data, callback) {
             _this.icon = icons.error;
             _this.data = {
-                title: $scope.datas.head[data.index].name,
+                title: config.fields[data.index].name,
                 messages: data.messages
             }
             _this.isVisible = "show";

@@ -6,7 +6,7 @@
  * commands management
  */
 angular.module("commandController", ["constraint", "configuration"])
-    .controller("commandController", function ($scope, $rootScope, constraintFactory) {
+    .controller("commandController", function ($scope, $rootScope, constraintFactory,config) {
         /**
          * Commands
          */
@@ -15,7 +15,7 @@ angular.module("commandController", ["constraint", "configuration"])
         /* New Record */
         $scope.newRecord = function () {
             var record = [];
-            for (var val in $scope.datas.head) {
+            for (var val in config.fields) {
                 record.push("");
             }
             tablescope.new_record = record;
@@ -31,7 +31,7 @@ angular.module("commandController", ["constraint", "configuration"])
 
         /* Save Record */
         $scope.saveRecord = function () {
-            var check = constraintFactory.checkAll($scope.new_record, $scope.datas.head)
+            var check = constraintFactory.checkAll($scope.new_record, config.fields)
             if (!check) {
                 tablescope.datas.body.unshift($scope.new_record);
                 tablescope.new_record = undefined;
@@ -62,7 +62,7 @@ angular.module("commandController", ["constraint", "configuration"])
         /* Query Record */
         $scope.queryRecord = function () {
             var record = [];
-            for (var val in $scope.datas.head) {
+            for (var val in config.fields) {
                 record.push("");
             }
             tablescope.query_record = record;

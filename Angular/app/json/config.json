@@ -1,5 +1,25 @@
 {
     "limit": 15,
     "minColumnWidth": 10,
-    "countVisibleRecords": 10
+    "countVisibleRecords": 10,
+    "fields": [
+        {
+            "name": "name",
+            "type": "text",
+            "dataBind":"",
+            "constraints": {
+                "required":"Name is required"
+            }
+        },
+        {
+            "name": "age",
+            "type": "date",
+            "constraints": {}
+        },
+        {
+            "name": "gender",
+            "type": "bool",
+            "constraints": {}
+        }
+    ]
 }

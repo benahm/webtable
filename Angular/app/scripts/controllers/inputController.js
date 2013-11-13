@@ -3,18 +3,18 @@
  */
 
 angular.module("inputController", ["configuration"])
-    .controller("inputController", function ($scope, $rootScope, constraintFactory) {
+    .controller("inputController", function ($scope, $rootScope, constraintFactory,config) {
         $scope.test="hello world";
         $scope.type="text";
         var tablescope = $scope.$parent;// get scope of tableController
 
 
         $scope.tabindex=function(i,j){
-            return i+1+(j+1)*$scope.datas.head.length;
+            return i+1+(j+1)*config.fields.length;
         }
 
         $scope.inputType=function(columnIndex){
-            return $scope.datas.head[columnIndex].type
+            return config.fields[columnIndex].type
         }
 
         /* apply changes */

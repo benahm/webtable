@@ -5,7 +5,7 @@
  * All filters of the project
  * @type {*}
  */
-var filtersModule=angular.module("filtersModule",[]);
+var filtersModule=angular.module("filtersModule",["configuration"]);
 filtersModule
 /**
  * queryRecord : filters used when a query is made

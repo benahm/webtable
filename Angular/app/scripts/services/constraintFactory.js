@@ -4,7 +4,7 @@
 /**
  * constraint management module
  */
-angular.module('constraint', [])
+angular.module('constraint', ["configuration"])
 
     .factory('constraintFactory', function () {
         //Constraint functions to check

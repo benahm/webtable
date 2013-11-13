@@ -5,7 +5,7 @@
 /**
  * Data management
  */
-angular.module('data', [])
+angular.module('data', ["configuration"])
 /**
  * dataFactory manage data from the server
  */

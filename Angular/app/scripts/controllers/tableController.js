@@ -14,8 +14,8 @@ angular.module("tableController", ["data", "configuration"])
         //get the data from the server
         dataFactory.getData("../json/test.json").success(function (data) {
             $scope.datas = data;
-            for (var i = 0; i < $scope.datas.head.length; i++)
-                $scope.datas.head[i].columnWidth = 98 / $scope.datas.head.length;
+            for (var i = 0; i < config.fields.length; i++)
+                config.fields[i].columnWidth = 98 / config.fields.length;
         })
 
         /**
@@ -81,7 +81,7 @@ angular.module("tableController", ["data", "configuration"])
         };
 
         $scope.columnWidth = function (index) {
-            return $scope.datas.head[index].columnWidth;
+            return config.fields[index].columnWidth;
         };
 
         $scope.makeArray = function (num) {
@@ -90,11 +90,11 @@ angular.module("tableController", ["data", "configuration"])
 
         $scope.webtableStyle = function () {
             var webtable_border = angular.element('#webtable-border');
-            var columnWidth = 98 / $scope.datas.head.length;
+            var columnWidth = 98 / config.fields.length;
             console.log(columnWidth)
             if (columnWidth < config.minColumnWidth) {
                 return {
-                    width: config.minColumnWidth * $scope.datas.head.length * webtable_border.width()
+                    width: config.minColumnWidth * config.fields.length * webtable_border.width()
                 }
             }
             return {
@@ -103,20 +103,20 @@ angular.module("tableController", ["data", "configuration"])
         }
 
         $scope.thWidth = function (index) {
-            return {width: $scope.datas.head[index].columnWidth + '%'}
+            return {width: config.fields[index].columnWidth + '%'}
         };
 
         $scope.hookLeft = function (index) {
             var percent = 2;
             for (var i = 0; i < index; i++)
-                percent += $scope.datas.head[i].columnWidth;
+                percent += config.fields[i].columnWidth;
             return {left: percent + '%'}
         };
 
         $scope.normalize = function (index) {
             var percent = 2;
             for (var i = 0; i < index; i++)
-                percent += $scope.datas.head[i].columnWidth;
+                percent += config.fields[i].columnWidth;
             var webtableWidth = angular.element("#webtable").width();
             angular.element("#hook-" + index).css({
                 left: percent * webtableWidth / 100
@@ -125,17 +125,17 @@ angular.module("tableController", ["data", "configuration"])
 
         $scope.$on("colResize", function (event, index, move) {
             // apply the move to columns width
-            $scope.datas.head[index].columnWidth -= move;
-            $scope.datas.head[index - 1].columnWidth += move;
+            config.fields[index].columnWidth -= move;
+            config.fields[index - 1].columnWidth += move;
             checkMinColumnWidth(index);
 
             //apply the width on the column index directly with css
             angular.element("#head-" + index).css({
-                width: $scope.datas.head[index].columnWidth + '%'
+                width: config.fields[index].columnWidth + '%'
             })
             //apply the width on the column index-1 directly with css
             angular.element("#head-" + (index - 1)).css({
-                width: $scope.datas.head[index - 1].columnWidth + '%'
+                width: config.fields[index - 1].columnWidth + '%'
             })
 
             //?????
@@ -149,15 +149,15 @@ angular.module("tableController", ["data", "configuration"])
          */
         function checkMinColumnWidth(index) {
             var minColumnWidth = config.minColumnWidth;
-            var diff = $scope.datas.head[index].columnWidth - minColumnWidth
+            var diff = config.fields[index].columnWidth - minColumnWidth
             if (diff < 0) {
-                $scope.datas.head[index].columnWidth = minColumnWidth;
-                $scope.datas.head[index - 1].columnWidth += diff;
+                config.fields[index].columnWidth = minColumnWidth;
+                config.fields[index - 1].columnWidth += diff;
             }
-            diff = $scope.datas.head[index - 1].columnWidth - minColumnWidth
+            diff = config.fields[index - 1].columnWidth - minColumnWidth
             if (diff < 0) {
-                $scope.datas.head[index - 1].columnWidth = minColumnWidth;
-                $scope.datas.head[index].columnWidth += diff;
+                config.fields[index - 1].columnWidth = minColumnWidth;
+                config.fields[index].columnWidth += diff;
             }
         }
 

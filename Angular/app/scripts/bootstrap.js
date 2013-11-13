@@ -19,9 +19,9 @@ function webtable(config) {
             countVisibleRecords: 10 // the number of records that can be visible on a single page
         };
 
-    if (!angular.isUndefined(config)) {
+    if (angular.isDefined(config)) {
         // config = path to json file
-        if (typeof config === 'string') {
+        if (angular.isString(config)) {
             console.log("path")
             var $injector = angular.injector(['ng']);
             var $http = $injector.get('$http'); // get instance of $http
@@ -39,7 +39,7 @@ function webtable(config) {
                 });
         } else {
             // config not object => Error
-            if (typeof config != 'object') throw  new Error("Bad config");
+            if (!angular.isObject(config)) throw  new Error("Bad config");
             // config passed as object
             configuration = angular.extend(defaults, config);
             bootstrap(configuration);
