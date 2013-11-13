@@ -6,7 +6,7 @@
  * Table management
  */
 angular.module("tableController", ["data", "configuration"])
-    .controller("tableController", function ($scope, $http, dataFactory) {
+    .controller("tableController", function ($scope, $http, dataFactory, config) {
         $scope.message = "hello,world"
         $scope.datas = {};
 
@@ -87,6 +87,21 @@ angular.module("tableController", ["data", "configuration"])
         $scope.makeArray = function (num) {
             return new Array(num);
         };
+
+        $scope.webtableStyle = function () {
+            var webtable_border = angular.element('#webtable-border');
+            var columnWidth = 98 / $scope.datas.head.length;
+            console.log(columnWidth)
+            if (columnWidth < config.minColumnWidth) {
+                return {
+                    width: config.minColumnWidth * $scope.datas.head.length * webtable_border.width()
+                }
+            }
+            return {
+                width: 100
+            }
+        }
+
         $scope.thWidth = function (index) {
             return {width: $scope.datas.head[index].columnWidth + '%'}
         };
@@ -133,7 +148,7 @@ angular.module("tableController", ["data", "configuration"])
          * @param index : index of the resize column
          */
         function checkMinColumnWidth(index) {
-            var minColumnWidth = 10;
+            var minColumnWidth = config.minColumnWidth;
             var diff = $scope.datas.head[index].columnWidth - minColumnWidth
             if (diff < 0) {
                 $scope.datas.head[index].columnWidth = minColumnWidth;
@@ -145,4 +160,5 @@ angular.module("tableController", ["data", "configuration"])
                 $scope.datas.head[index].columnWidth += diff;
             }
         }
+
     });

@@ -120,6 +120,7 @@ angular.module("modalController", [])
          * bind to events that other modules can emit or broadcast
          */
         var bindEvents = function () {
+
             $scope.$on("error", function (event, message) {
                 _this.error(message);
             })

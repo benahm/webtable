@@ -7,18 +7,15 @@
 angular.module("pageController", ["data","configuration"])
     .controller("pageController", function ($scope,dataFactory) {
         //TODO to implement
-        var _this=this;
         /**
          * display the next page on the table
          */
         this.next=function(){
-            console.log("hello")
             //get the data from the server
             dataFactory.getData("../json/test2.json").success(function (data) {
                 $scope.$parent.datas = data;
                 for(var i= 0;i<$scope.datas.head.length;i++)
                     $scope.$parent.datas.head[i].columnWidth=98/$scope.datas.head.length;
-                console.log("hello")
             })
         };
 
@@ -27,7 +24,7 @@ angular.module("pageController", ["data","configuration"])
          * @param index of the page to display
          */
         this.goto=function(index){
-            _this.active=index+1;
+            this.active=index+1;
             //get the data from the server
 //            dataFactory.getData("../json/test.json").success(function (data) {
 //                $scope.$parent.datas = data;
@@ -38,6 +35,7 @@ angular.module("pageController", ["data","configuration"])
          * display the previous page on the table
          */
         this.previous=function(){
+
             //get the data from the server
             dataFactory.getData("../json/test.json").success(function (data) {
                 $scope.$parent.datas = data;

@@ -23,8 +23,8 @@ angular.module("commandController", ["constraint", "configuration"])
             tablescope.selectedRecordValue = -1;
         };
 
-        /* Cancel Record */
-        $scope.cancelRecord = function () {
+        /* undo Record */
+        $scope.undoRecord = function () {
             tablescope.new_record = undefined;
             tablescope.show_new_record = false;
         }
@@ -112,7 +112,7 @@ angular.module("commandController", ["constraint", "configuration"])
             newRecord: function () {
                 return $scope.show_query_record || $scope.show_new_record
             },
-            cancelRecord: function () {
+            undoRecord: function () {
                 return !$scope.show_new_record
             },
             saveRecord: function () {
