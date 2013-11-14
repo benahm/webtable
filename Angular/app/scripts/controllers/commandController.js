@@ -101,11 +101,7 @@ angular.module("commandController", ["constraint", "configuration"])
             $rootScope.$broadcast("inform", "Total: " + count + " records.");// display info
         }
 
-        //TODO config commands
-        var config = $scope.config = {
-            newRecord: true,
-            cancelRecord: true
-        }
+
 
         // managing commands display //
         $scope.commands = {

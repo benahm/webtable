@@ -55,7 +55,7 @@ function webtable(config) {
     function bootstrap(configuration) {
         angular.module('configuration', [])
             .constant('config', configuration);
-        var webtable_element = angular.element("[webtable=''");
+        var webtable_element = angular.element("[webtable='']");
         // bootstrap.
         angular.bootstrap(webtable_element, ["webtable"]);
     }
