@@ -1,6 +1,6 @@
 {
     "limit": 15,
-    "minColumnWidth": 10,
+    "minColumnWidth": 100,
     "countVisibleRecords": 10,
     "fields": [
         {

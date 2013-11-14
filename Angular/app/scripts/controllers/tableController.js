@@ -95,10 +95,11 @@ angular.module("tableController", ["data", "configuration","utils"])
         $scope.webtableStyle = function () {
             var webtable_border = angular.element('#webtable-border'),
                 columnWidth = 98 / config.fields.length;
-            if (columnWidth < config.minColumnWidth) {
+
+            if (columnWidth < utilsFactory.pxToPercent(config.minColumnWidth,webtable_border.width())) {
                 return {
                     // if column width is less than the minimum column with
-                    width: config.minColumnWidth * config.fields.length * webtable_border.width()/100+"px"
+                    width: config.fields.length * config.minColumnWidth +"px"
                 }
             }
             return {
@@ -123,7 +124,7 @@ angular.module("tableController", ["data", "configuration","utils"])
                 percent += config.fields[i].columnWidth;
             var webtableWidth = angular.element("#webtable").width();
             angular.element("#hook-" + index).css({
-                left: percent * webtableWidth / 100
+                left: utilsFactory.percentToPx(percent, webtableWidth)
             })
         };
 
@@ -132,7 +133,6 @@ angular.module("tableController", ["data", "configuration","utils"])
          */
         $scope.$on("colResize", function (event, index, move) {
             // apply the move to columns width
-            console.log(move)
             config.fields[index].columnWidth -= move;
             config.fields[index - 1].columnWidth += move;
             checkMinColumnWidth(index);
@@ -156,15 +156,14 @@ angular.module("tableController", ["data", "configuration","utils"])
          * @param index : index of the resize column
          */
         function checkMinColumnWidth(index) {
-            var minColumnWidth = config.minColumnWidth;
+            var webtableWidth = angular.element("#webtable").width()
+            var minColumnWidth = utilsFactory.pxToPercent(config.minColumnWidth,webtableWidth);
             var diff = config.fields[index].columnWidth - minColumnWidth
-            console.log(1,diff);
             if (diff < 0) {
                 config.fields[index].columnWidth = minColumnWidth;
                 config.fields[index - 1].columnWidth += diff;
             }
             diff = config.fields[index - 1].columnWidth - minColumnWidth
-            console.log(2,diff);
             if (diff < 0) {
                 config.fields[index - 1].columnWidth = minColumnWidth;
                 config.fields[index].columnWidth += diff;
