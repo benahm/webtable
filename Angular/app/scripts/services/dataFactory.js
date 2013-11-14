@@ -28,10 +28,7 @@ angular.module('data', ["configuration"])
 
         return {
             /**
-             * get data from the server
-             * @param url the url where to get the data
-             * @param offset offset of the record to get
-             * @param limit limit of the record to get
+             * get all records from the server
              * @returns {{success: Function}} success method to execute
              */
             allRecords: function () {
@@ -39,7 +36,7 @@ angular.module('data', ["configuration"])
                 $http({
                     method: "GET",
                     url: config.url + "?" + config.actions.list,
-                    params: {action: "list", offset: 10, limit: 10}
+                    params: {offset: 10, limit: 10}
                 }).success(function () {
                         if (typeof chain.success === "function")
                             chain.success.apply(this, arguments);
@@ -50,13 +47,17 @@ angular.module('data', ["configuration"])
                     })
                 return chain.r;
             },
+            /**
+             * save a new record to the server
+             * @param new_record
+             * @returns {{success: Function, error: Function}|*}
+             */
             newRecord: function (new_record) {
                 var chain = new Chain();
                 $http({
                     method: "POST",
                     url: config.url + "?" + config.actions.create,
                     data: new_record,
-                    params: {action: "create"}
                 }).success(function () {
                         if (typeof chain.success === "function")
                             chain.success.apply(this, arguments);
@@ -66,13 +67,17 @@ angular.module('data', ["configuration"])
                     })
                 return chain.r;
             },
-            updateRecord: function (record, success, error) {
+            /**
+             * update record to the server
+             * @param record : record to update
+             * @returns {{success: Function, error: Function}|*}
+             */
+            updateRecord: function (record) {
                 var chain = new Chain();
                 $http({
                     method: "POST",
                     url: config.url + "?" + config.actions.update,
-                    data: record,
-                    params: {action: "update"}
+                    data: record
                 }).success(function () {
                         if (typeof chain.success === "function")
                             chain.success.apply(this, arguments);
@@ -82,13 +87,17 @@ angular.module('data', ["configuration"])
                     })
                 return chain.r;
             },
-            deleteRecord: function (record, success, error) {
+            /**
+             * delete record from the server
+             * @param record : record to delete
+             * @returns {{success: Function, error: Function}|*}
+             */
+            deleteRecord: function (record) {
                 var chain = new Chain();
                 $http({
                     method: "POST",
                     url: config.url + "?" + config.actions.delete,
-                    data: record,
-                    params: {action: "delete"}
+                    data: record
                 }).success(function () {
                         if (typeof chain.success === "function")
                             chain.success.apply(this, arguments);
@@ -98,12 +107,41 @@ angular.module('data', ["configuration"])
                     })
                 return chain.r;
             },
-
-            queryRecord: function () {
-
+            /**
+             * query record from the server
+             * @param query_record
+             * @returns {{success: Function, error: Function}|*}
+             */
+            queryRecord: function (query_record) {
+                var chain = new Chain();
+                $http({
+                    method: "POST",
+                    url: config.url + "?" + config.actions.query,
+                    data: query_record
+                }).success(function () {
+                        if (typeof chain.success === "function")
+                            chain.success.apply(this, arguments);
+                    }).error(function () {
+                        if (typeof chain.error === "function")
+                            chain.error.apply(this, arguments);
+                    })
+                return chain.r;
             },
-            aboutRecord: function () {
-
+            aboutRecord: function (record) {
+                var chain = new Chain();
+                $http({
+                    method: "POST",
+                    url: config.url + "?" + config.actions.about,
+                    data: record,
+                    params: {action: "about"}
+                }).success(function () {
+                        if (typeof chain.success === "function")
+                            chain.success.apply(this, arguments);
+                    }).error(function () {
+                        if (typeof chain.error === "function")
+                            chain.error.apply(this, arguments);
+                    })
+                return chain.r;
             }
         }
     })

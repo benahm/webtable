@@ -5,7 +5,8 @@
         "list": "action=list",
         "create": "action=create",
         "update": "action=update",
-        "delete": "action=delete"
+        "delete": "action=delete",
+        "query": "action=query"
     },
     "fields": [
         {

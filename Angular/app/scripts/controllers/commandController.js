@@ -79,6 +79,7 @@ angular.module("commandController", ["constraint", "configuration", "data"])
             for (var val in config.fields) {
                 record.push("");
             }
+
             tablescope.query_record = record;
             tablescope.show_query_record = true;
             tablescope.setSelectedRecord(-1);
@@ -86,11 +87,22 @@ angular.module("commandController", ["constraint", "configuration", "data"])
 
         /* Refine Query Record */
         $scope.refineQueryRecord = function () {
+            tablescope.query_record=$scope.last_query_record;
             tablescope.show_query_record = true;
             tablescope.setSelectedRecord(-1);
         };
         /* Execute Query Record */
         $scope.executeQueryRecord = function () {
+            tablescope.last_query_record=$scope.query_record;
+            // execute query here
+            dataFactory.queryRecord($scope.query_record)
+                .success(function(data){
+                    console.log("success");
+                })
+                .error(function(data){
+                    console.log("error");
+                })
+            tablescope.query_record = undefined;
             tablescope.show_query_record = false;
         };
 
@@ -102,7 +114,7 @@ angular.module("commandController", ["constraint", "configuration", "data"])
 
         /* About Record */
         $scope.aboutRecord = function () {
-            var index = $scope.indexSelectedRecord;
+                var index = $scope.indexSelectedRecord;
             if (index != -1) {
                 var changed = false // TODO
                 $rootScope.$broadcast("inform", changed ? "The record has been modified." : "The record has not been modified yet.");

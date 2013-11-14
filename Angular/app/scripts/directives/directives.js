@@ -75,22 +75,19 @@ directivesModule.directive('doFocus', function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell.html',
-            replace: true,
-            scope: true
+            replace: true
         };
     }).directive('webtableCellNew',function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell-new.html',
-            replace: true,
-            scope: true
+            replace: true
         };
     }).directive('webtableCellQuery',function ($timeout) {
         return {
             restrict: 'AE',
             templateUrl: 'templates/webtable-cell-query.html',
-            replace: true,
-            scope: true
+            replace: true
         };
     }).directive("webtable",function () {
         return {

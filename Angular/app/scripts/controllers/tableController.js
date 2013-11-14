@@ -106,7 +106,6 @@ angular.module("tableController", ["data", "configuration", "utils"])
 
          /*** column resize ***/
 
-
         $scope.columnWidth = function (index) {
             return config.fields[index].columnWidth;
         };

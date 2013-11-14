@@ -98,8 +98,9 @@
                         <div webtable-cell-new></div>
                     </td>
                 </tr>
-                <tr ng-repeat="(outerindex,data) in records |queryRecord:query_record|orderBy:selectedColumn:reverseSort"
-                    ng-class="activeRecord(outerindex)">
+                <tr ng-repeat="(outerindex,data) in records |orderBy:selectedColumn:reverseSort"
+                    ng-class="activeRecord(outerindex)"
+                        ng-hide="show_query_record">
                     <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'>':'-'}}</td>
                     <td ng-repeat="d in data track by $index " ng-init="innerindex=$index">
                         <div webtable-cell></div>
