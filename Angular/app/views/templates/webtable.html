@@ -78,9 +78,9 @@
                             <div id="hook-{{index}}" class="hook" ng-style="hookLeft(index)"
                                  draggable></div>
                         </div>
-                        <i class="glyphicon glyphicon-sort" ng-hide="columnNum==$index"></i>
-                        <i class="glyphicon glyphicon-chevron-up pull-up" ng-show="!reverseSort&&columnNum==$index"></i>
-                        <i class="glyphicon glyphicon-chevron-down " ng-show="reverseSort&&columnNum==$index"></i>
+                        <i class="glyphicon glyphicon-sort" ng-hide="indexSelectedColumn==$index"></i>
+                        <i class="glyphicon glyphicon-chevron-up pull-up" ng-show="!reverseSort&&indexSelectedColumn==$index"></i>
+                        <i class="glyphicon glyphicon-chevron-down " ng-show="reverseSort&&indexSelectedColumn==$index"></i>
                         {{element.name}}
                     </th>
                 </tr>

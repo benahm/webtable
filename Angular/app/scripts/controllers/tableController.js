@@ -22,18 +22,17 @@ angular.module("tableController", ["data", "configuration", "utils"])
                 config.fields[i].columnWidth = 98 / config.fields.length;
         })
 
-        /**
-         * Sort and selection
-         *
-         */
-        $scope.selectedRecordValue = -1;
+         /*** record selection ***/
+
+        $scope.indexSelectedRecord = -1;
+        $scope.recordChanged = false;
         /**
          * return 'active' if the index of the record is active
          * @param index : index of the record which to check if it's active
          * @returns {string} 'active' or empty string
          */
         $scope.activeRecord = function (index) {
-            if ($scope.selectedRecordValue === index)
+            if ($scope.indexSelectedRecord === index)
                 return "active"
             return "";
         }
@@ -43,15 +42,16 @@ angular.module("tableController", ["data", "configuration", "utils"])
          * @param index : index of the selected record
          */
         $scope.setSelectedRecord = function (index) {
-            var lastIndex = $scope.selectedRecordValue;
+            var lastIndex = $scope.indexSelectedRecord;
             if (lastIndex != index) {
-                console.log(lastIndex)
+                // if a record was selected and changed
                 if (lastIndex != -1 && $scope.recordChanged) {
                     var record = $scope.records[lastIndex];
+                    // send the updated record to the server
                     dataFactory.updateRecord(record)
                         .success(function (data) {
                             console.log("success")
-                            $scope.selectedRecordValue = index;
+                            $scope.indexSelectedRecord = index;
                             $scope.recordChanged = false;
                             console.log("set sr", $scope.recordChanged)
                         })
@@ -59,7 +59,7 @@ angular.module("tableController", ["data", "configuration", "utils"])
                             console.log("error")
                         });
                 } else
-                    $scope.selectedRecordValue = index;
+                    $scope.indexSelectedRecord = index;
             }
         }
 
@@ -69,11 +69,13 @@ angular.module("tableController", ["data", "configuration", "utils"])
          * @returns {boolean}
          */
         $scope.isSelectedRecord = function (index) {
-            if (index === undefined)return false;
-            return ($scope.selectedRecordValue === index);
+            if (index === undefined) return false;
+            return ($scope.indexSelectedRecord === index);
         };
-        $scope.recordChanged = false;
-        $scope.columnNum = -1;
+
+         /*** record sorting  **/
+
+        $scope.indexSelectedColumn = -1;
         $scope.reverseSort = false;
 
         /**
@@ -81,10 +83,10 @@ angular.module("tableController", ["data", "configuration", "utils"])
          * @param index : index of the selected column
          */
         $scope.setSelectedColumn = function (index) {
-            if ($scope.columnNum === index)
+            if ($scope.indexSelectedColumn === index)
                 $scope.reverseSort = !$scope.reverseSort;
             else {
-                $scope.columnNum = index;
+                $scope.indexSelectedColumn = index;
                 $scope.reverseSort = false;
             }
         };
@@ -95,11 +97,15 @@ angular.module("tableController", ["data", "configuration", "utils"])
          * @returns {*} value
          */
         $scope.selectedColumn = function (record) {
-            if ($scope.columnNum >= 0)
-                return record[$scope.columnNum];
+            if ($scope.indexSelectedColumn >= 0)
+                return record[$scope.indexSelectedColumn];
             //if no column selected return the indexOf
             return $scope.records.indexOf(record);
         };
+
+
+         /*** column resize ***/
+
 
         $scope.columnWidth = function (index) {
             return config.fields[index].columnWidth;
@@ -112,7 +118,6 @@ angular.module("tableController", ["data", "configuration", "utils"])
         $scope.webtableStyle = function () {
             var webtable_border = angular.element('#webtable-border'),
                 columnWidth = 98 / config.fields.length;
-
             if (columnWidth < utilsFactory.pxToPercent(config.minColumnWidth, webtable_border.width())) {
                 return {
                     // if column width is less than the minimum column with

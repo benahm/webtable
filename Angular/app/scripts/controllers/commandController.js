@@ -49,22 +49,22 @@ angular.module("commandController", ["constraint", "configuration", "data"])
 
         /* Copy Record */
         $scope.copyRecord = function () {
-            if ($scope.selectedRecordValue !== -1) {
-                var record = $scope.records[$scope.selectedRecordValue];
+            if ($scope.indexSelectedRecord !== -1) {
+                var record = $scope.records[$scope.indexSelectedRecord];
                 var copyOfRecord = angular.copy(record);
-                tablescope.records.splice($scope.selectedRecordValue, 0, copyOfRecord);
+                tablescope.records.splice($scope.indexSelectedRecord, 0, copyOfRecord);
             } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
         /* Delete Record */
         $scope.deleteRecord = function () {
-            var index = $scope.selectedRecordValue;
+            var index = $scope.indexSelectedRecord;
             if (index !== -1) {
                 var record = $scope.records[index];
                 dataFactory.deleteRecord(record)
                     .success(function (data) {
                         if (index > 0)
-                            tablescope.setSelectedRecord(tablescope.selectedRecordValue-1);
+                            tablescope.setSelectedRecord(tablescope.indexSelectedRecord-1);
                         tablescope.records.splice(index, 1);
                     })
                     .error(function (data) {
@@ -102,7 +102,7 @@ angular.module("commandController", ["constraint", "configuration", "data"])
 
         /* About Record */
         $scope.aboutRecord = function () {
-            var index = $scope.selectedRecordValue;
+            var index = $scope.indexSelectedRecord;
             if (index != -1) {
                 var changed = false // TODO
                 $rootScope.$broadcast("inform", changed ? "The record has been modified." : "The record has not been modified yet.");
