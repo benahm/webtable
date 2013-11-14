@@ -2,10 +2,10 @@
  * Created by ahmed on 11/11/13.
  */
 /**
- * page management
+ * loading data management
  */
-angular.module("pageController", ["data","configuration"])
-    .controller("pageController", function ($scope,dataFactory,config) {
+angular.module("loadController", ["data","configuration"])
+    .controller("loadController", function ($scope,dataFactory,config) {
         //TODO to implement
         /**
          * display the next page on the table

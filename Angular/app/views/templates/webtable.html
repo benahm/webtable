@@ -113,14 +113,4 @@
             </table>
         </div>
     </div>
-    <div ng-controller="pageController as page">
-        <ul class="pagination pagination-sm">
-            <li><a href="" ng-click="page.next()">&laquo;</a></li>
-            <li ng-class="page.active==$index+1?'active':''"
-                ng-repeat="i in utils.makeArray(page.to-page.from+1) track by $index">
-                <a href="" ng-click="page.goto($index)">{{$index+page.from}}</a>
-            </li>
-            <li><a href="" ng-click="page.previous()">&raquo;</a></li>
-        </ul>
-    </div>
 </div>
