@@ -1,14 +1,19 @@
 {
-    "limit": 15,
     "minColumnWidth": 100,
-    "countVisibleRecords": 10,
+    "url": "../server/server.php",
+    "actions": {
+        "list": "action=list",
+        "create": "action=create",
+        "update": "action=update",
+        "delete": "action=delete"
+    },
     "fields": [
         {
             "name": "name",
             "type": "text",
-            "dataBind":"",
+            "dataBind": "",
             "constraints": {
-                "required":"Name is required"
+                "required": "Name is required"
             }
         },
         {

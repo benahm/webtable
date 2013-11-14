@@ -5,17 +5,17 @@
 /**
  * Table management
  */
-angular.module("tableController", ["data", "configuration","utils"])
-    .controller("tableController", function ($scope, $http, dataFactory, config,utilsFactory) {
+angular.module("tableController", ["data", "configuration", "utils"])
+    .controller("tableController", function ($scope, $http, $rootScope, dataFactory, config, utilsFactory) {
         $scope.message = "hello,world"
 
         //utils factory
-        $scope.utils=utilsFactory;
+        $scope.utils = utilsFactory;
         //config
-        $scope.config=config;
+        $scope.config = config;
 
         //get the data from the server
-        dataFactory.getData("../json/test.json").success(function (data) {
+        dataFactory.allRecords().success(function (data) {
             console.log(data)
             $scope.records = data.records;
             for (var i = 0; i < config.fields.length; i++)
@@ -43,7 +43,24 @@ angular.module("tableController", ["data", "configuration","utils"])
          * @param index : index of the selected record
          */
         $scope.setSelectedRecord = function (index) {
-            $scope.selectedRecordValue = index;
+            var lastIndex = $scope.selectedRecordValue;
+            if (lastIndex != index) {
+                console.log(lastIndex)
+                if (lastIndex != -1 && $scope.recordChanged) {
+                    var record = $scope.records[lastIndex];
+                    dataFactory.updateRecord(record)
+                        .success(function (data) {
+                            console.log("success")
+                            $scope.selectedRecordValue = index;
+                            $scope.recordChanged = false;
+                            console.log("set sr", $scope.recordChanged)
+                        })
+                        .error(function (data) {
+                            console.log("error")
+                        });
+                } else
+                    $scope.selectedRecordValue = index;
+            }
         }
 
         /**
@@ -55,7 +72,7 @@ angular.module("tableController", ["data", "configuration","utils"])
             if (index === undefined)return false;
             return ($scope.selectedRecordValue === index);
         };
-
+        $scope.recordChanged = false;
         $scope.columnNum = -1;
         $scope.reverseSort = false;
 
@@ -96,10 +113,10 @@ angular.module("tableController", ["data", "configuration","utils"])
             var webtable_border = angular.element('#webtable-border'),
                 columnWidth = 98 / config.fields.length;
 
-            if (columnWidth < utilsFactory.pxToPercent(config.minColumnWidth,webtable_border.width())) {
+            if (columnWidth < utilsFactory.pxToPercent(config.minColumnWidth, webtable_border.width())) {
                 return {
                     // if column width is less than the minimum column with
-                    width: config.fields.length * config.minColumnWidth +"px"
+                    width: config.fields.length * config.minColumnWidth + "px"
                 }
             }
             return {
@@ -157,7 +174,7 @@ angular.module("tableController", ["data", "configuration","utils"])
          */
         function checkMinColumnWidth(index) {
             var webtableWidth = angular.element("#webtable").width()
-            var minColumnWidth = utilsFactory.pxToPercent(config.minColumnWidth,webtableWidth);
+            var minColumnWidth = utilsFactory.pxToPercent(config.minColumnWidth, webtableWidth);
             var diff = config.fields[index].columnWidth - minColumnWidth
             if (diff < 0) {
                 config.fields[index].columnWidth = minColumnWidth;
@@ -170,6 +187,9 @@ angular.module("tableController", ["data", "configuration","utils"])
             }
         }
 
+        $scope.$on("recordChanged", function () {
+            $scope.recordChanged = true;
+        })
 
 
     });

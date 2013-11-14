@@ -21,7 +21,7 @@ angular.module("inputController", ["configuration"])
 
         $scope.cellChanged=function(d,i,j){
             tablescope.records[i][j]=d;
-            console.log(d)
+            $scope.$emit("recordChanged");
         }
         $scope.nqCellChanged=function(d,n,q,i){
             console.log(d,n,q,i);

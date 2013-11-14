@@ -20,14 +20,14 @@
 
 		//Return result to jTable
 		$webtableResult = array();
-		$webtableResult['Result'] = "OK";
-		$webtableResult['Records'] = $rows;
+		$webtableResult['result'] = "OK";
+		$webtableResult['records'] = $rows;
 		print json_encode($webtableResult);
 	}
 	//Creating a new record (createAction)
 	else if($_GET["action"] == "create")
 	{
-		//Insert record into database
+		/*//Insert record into database
 		$result = mysql_query("INSERT INTO people(Name, Age, RecordDate) VALUES('" . $_POST["Name"] . "', " . $_POST["Age"] . ",now());");
 		
 		//Get last inserted record (to return to jTable)
@@ -38,7 +38,8 @@
 		$jTableResult = array();
 		$jTableResult['Result'] = "OK";
 		$jTableResult['Record'] = $row;
-		print json_encode($jTableResult);
+		print json_encode($jTableResult);*/
+		echo "hello";
 	}
 	//Updating a record (updateAction)
 	else if($_GET["action"] == "update")

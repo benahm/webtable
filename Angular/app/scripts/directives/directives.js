@@ -23,7 +23,7 @@ directivesModule.directive('doFocus', function ($timeout) {
                             tablescope.show_query_record = false;
                         }
                         if (scope.outerindex != undefined) {
-                            tablescope.selectedRecordValue = scope.outerindex;
+                            tablescope.setSelectedRecord(scope.outerindex);
                         }
                         if (tablescope.new_record) {
                             /*tablescope.records.unshift(tablescope.new_record);

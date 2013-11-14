@@ -5,8 +5,8 @@
 /**
  * commands management
  */
-angular.module("commandController", ["constraint", "configuration"])
-    .controller("commandController", function ($scope, $rootScope, constraintFactory,config) {
+angular.module("commandController", ["constraint", "configuration", "data"])
+    .controller("commandController", function ($scope, $rootScope, constraintFactory, dataFactory, config) {
         /**
          * Commands
          */
@@ -33,10 +33,17 @@ angular.module("commandController", ["constraint", "configuration"])
         $scope.saveRecord = function () {
             var check = constraintFactory.checkAll($scope.new_record, config.fields)
             if (!check) {
-                tablescope.records.unshift($scope.new_record);
-                tablescope.new_record = undefined;
-                tablescope.show_new_record = false;
-                tablescope.selectedRecordValue = 0
+                dataFactory.newRecord($scope.new_record)
+                    .success(function (data) {
+                        tablescope.records.unshift($scope.new_record);
+                        tablescope.new_record = undefined;
+                        tablescope.show_new_record = false;
+                        tablescope.setSelectedRecord(0);
+                        console.log("success")
+                    })
+                    .error(function(){
+                       console.log("error")
+                    })
             } else $rootScope.$broadcast("errors", check);
         }
 
@@ -53,9 +60,16 @@ angular.module("commandController", ["constraint", "configuration"])
         $scope.deleteRecord = function () {
             var index = $scope.selectedRecordValue;
             if (index !== -1) {
-                if (index > 0)
-                    tablescope.selectedRecordValue--;
-                tablescope.records.splice(index, 1);
+                var record = $scope.records[index];
+                dataFactory.deleteRecord(record)
+                    .success(function (data) {
+                        if (index > 0)
+                            tablescope.setSelectedRecord(tablescope.selectedRecordValue-1);
+                        tablescope.records.splice(index, 1);
+                    })
+                    .error(function (data) {
+
+                    });
             } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
@@ -67,13 +81,13 @@ angular.module("commandController", ["constraint", "configuration"])
             }
             tablescope.query_record = record;
             tablescope.show_query_record = true;
-            tablescope.selectedRecordValue = -1;
+            tablescope.setSelectedRecord(-1);
         };
 
         /* Refine Query Record */
         $scope.refineQueryRecord = function () {
             tablescope.show_query_record = true;
-            tablescope.selectedRecordValue = -1;
+            tablescope.setSelectedRecord(-1);
         };
         /* Execute Query Record */
         $scope.executeQueryRecord = function () {
@@ -100,7 +114,6 @@ angular.module("commandController", ["constraint", "configuration"])
             var count = $scope.info.countRecords;
             $rootScope.$broadcast("inform", "Total: " + count + " records.");// display info
         }
-
 
 
         // managing commands display //
