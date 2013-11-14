@@ -98,15 +98,14 @@
                         <div webtable-cell-new></div>
                     </td>
                 </tr>
-                <tr ng-repeat="(outerindex,data) in datas.body |queryRecord:query_record|orderBy:selectedColumn:reverseSort"
+                <tr ng-repeat="(outerindex,data) in records |queryRecord:query_record|orderBy:selectedColumn:reverseSort"
                     ng-class="activeRecord(outerindex)">
                     <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'>':'-'}}</td>
-                    <td ng-repeat="d in data track by $index " ng-init="innerindex=$index"
-                            >
+                    <td ng-repeat="d in data track by $index " ng-init="innerindex=$index">
                         <div webtable-cell></div>
                     </td>
                 </tr>
-                <tr ng-repeat="i in utils.makeArray(15-datas.body.length) track by $index">
+                <tr ng-repeat="i in utils.makeArray(15-records.length) track by $index">
                     <td class="well">-</td>
                 </tr>
                 </tbody>

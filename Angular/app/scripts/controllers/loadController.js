@@ -13,9 +13,7 @@ angular.module("loadController", ["data","configuration"])
         this.next=function(){
             //get the data from the server
             dataFactory.getData("../json/test2.json").success(function (data) {
-                $scope.$parent.datas = data;
-                for(var i= 0;i<config.fields.length;i++)
-                    $scope.$parent.datas.head[i].columnWidth=98/config.fields.length;
+                $scope.$parent.records = data.records;
             })
         };
 
@@ -27,7 +25,7 @@ angular.module("loadController", ["data","configuration"])
             this.active=index+1;
             //get the data from the server
 //            dataFactory.getData("../json/test.json").success(function (data) {
-//                $scope.$parent.datas = data;
+//                $scope.$parent = data;
 //            })
         };
 
@@ -38,7 +36,7 @@ angular.module("loadController", ["data","configuration"])
 
             //get the data from the server
             dataFactory.getData("../json/test.json").success(function (data) {
-                $scope.$parent.datas = data;
+                $scope.$parent.records = data.records;
             })
         };
 

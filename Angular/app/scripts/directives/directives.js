@@ -19,7 +19,6 @@ directivesModule.directive('doFocus', function ($timeout) {
 
                     $timeout(function () {
                         var tablescope = $("#webtable").scope();
-                        console.log(scope.query_record, scope.new_record)
                         if (!scope.query_record) {
                             tablescope.show_query_record = false;
                         }
@@ -27,7 +26,7 @@ directivesModule.directive('doFocus', function ($timeout) {
                             tablescope.selectedRecordValue = scope.outerindex;
                         }
                         if (tablescope.new_record) {
-                            /*tablescope.datas.body.unshift(tablescope.new_record);
+                            /*tablescope.records.unshift(tablescope.new_record);
                              tablescope.new_record = undefined;
                              tablescope.show_new_record = false;*/
 

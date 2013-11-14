@@ -1,28 +1,6 @@
 {
-    "info": {
-        "countRecords":28
-    },
-    "head": [
-        {
-            "name": "name",
-            "type": "text",
-            "dataBind":"",
-            "constraints": {
-                "required":"Name is required"
-            }
-        },
-        {
-            "name": "age",
-            "type": "date",
-            "constraints": {}
-        },
-        {
-            "name": "gender",
-            "type": "bool",
-            "constraints": {}
-        }
-    ],
-    "body": [
+    "result":"OK",
+    "records": [
         [
             "John"
             ,

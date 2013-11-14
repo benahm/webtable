@@ -8,7 +8,6 @@
 angular.module("tableController", ["data", "configuration","utils"])
     .controller("tableController", function ($scope, $http, dataFactory, config,utilsFactory) {
         $scope.message = "hello,world"
-        $scope.datas = {};
 
         //utils factory
         $scope.utils=utilsFactory;
@@ -17,7 +16,8 @@ angular.module("tableController", ["data", "configuration","utils"])
 
         //get the data from the server
         dataFactory.getData("../json/test.json").success(function (data) {
-            $scope.datas = data;
+            console.log(data)
+            $scope.records = data.records;
             for (var i = 0; i < config.fields.length; i++)
                 config.fields[i].columnWidth = 98 / config.fields.length;
         })
@@ -81,7 +81,7 @@ angular.module("tableController", ["data", "configuration","utils"])
             if ($scope.columnNum >= 0)
                 return record[$scope.columnNum];
             //if no column selected return the indexOf
-            return $scope.datas.body.indexOf(record);
+            return $scope.records.indexOf(record);
         };
 
         $scope.columnWidth = function (index) {

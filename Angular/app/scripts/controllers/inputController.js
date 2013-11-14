@@ -20,7 +20,7 @@ angular.module("inputController", ["configuration"])
         /* apply changes */
 
         $scope.cellChanged=function(d,i,j){
-            tablescope.datas.body[i][j]=d;
+            tablescope.records[i][j]=d;
             console.log(d)
         }
         $scope.nqCellChanged=function(d,n,q,i){

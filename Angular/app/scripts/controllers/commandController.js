@@ -33,7 +33,7 @@ angular.module("commandController", ["constraint", "configuration"])
         $scope.saveRecord = function () {
             var check = constraintFactory.checkAll($scope.new_record, config.fields)
             if (!check) {
-                tablescope.datas.body.unshift($scope.new_record);
+                tablescope.records.unshift($scope.new_record);
                 tablescope.new_record = undefined;
                 tablescope.show_new_record = false;
                 tablescope.selectedRecordValue = 0
@@ -43,9 +43,9 @@ angular.module("commandController", ["constraint", "configuration"])
         /* Copy Record */
         $scope.copyRecord = function () {
             if ($scope.selectedRecordValue !== -1) {
-                var record = $scope.datas.body[$scope.selectedRecordValue];
+                var record = $scope.records[$scope.selectedRecordValue];
                 var copyOfRecord = angular.copy(record);
-                tablescope.datas.body.splice($scope.selectedRecordValue, 0, copyOfRecord);
+                tablescope.records.splice($scope.selectedRecordValue, 0, copyOfRecord);
             } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
@@ -55,7 +55,7 @@ angular.module("commandController", ["constraint", "configuration"])
             if (index !== -1) {
                 if (index > 0)
                     tablescope.selectedRecordValue--;
-                tablescope.datas.body.splice(index, 1);
+                tablescope.records.splice(index, 1);
             } else $rootScope.$broadcast("error", "No record selected!");//display error
         }
 
@@ -97,7 +97,7 @@ angular.module("commandController", ["constraint", "configuration"])
 
         /* Count Records */
         $scope.countRecords = function () {
-            var count = $scope.datas.info.countRecords;
+            var count = $scope.info.countRecords;
             $rootScope.$broadcast("inform", "Total: " + count + " records.");// display info
         }
 
