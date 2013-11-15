@@ -65,8 +65,8 @@
         <!-- /.modal -->
 
     </div>
-    <div id="webtable-border">
-        <div id="webtable" ng-style="webtableStyle()">
+    <div id="webtable-border" on-scroll="loadMore()">
+        <div id="webtable" ng-style="webtableStyle()"  >
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>

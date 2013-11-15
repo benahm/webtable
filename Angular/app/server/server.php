@@ -23,6 +23,7 @@
 		$webtableResult['result'] = "OK";
 		$webtableResult['records'] = $rows;
 		print json_encode($webtableResult);
+
 	}
 	//Creating a new record (createAction)
 	else if($_GET["action"] == "create")

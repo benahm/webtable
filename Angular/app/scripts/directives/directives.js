@@ -71,6 +71,24 @@ directivesModule.directive('doFocus', function ($timeout) {
                 $document.unbind('mouseup', mouseup);
             }
         }
+    })
+/**
+ *
+ */
+    .directive('onScroll', function() {
+        return function(scope, elm, attr) {
+            var raw = elm[0];
+
+            var funCheckBounds = function(evt) {
+                console.log("event fired: " + evt.type);
+                console.log(raw.scrollTop,raw.offsetHeight,raw.scrollHeight);
+                if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+                    scope.$apply(attr.onScroll);
+                }
+
+            };
+            angular.element(elm).bind('scroll', funCheckBounds);
+        };
     }).directive('webtableCell',function () {
         return {
             restrict: 'AE',

@@ -196,4 +196,9 @@ angular.module("tableController", ["data", "configuration", "utils"])
         })
 
 
+        $scope.loadMore=function(){
+            //TODO loadMore records
+          console.log("Loading more records");
+        };
+
     });
