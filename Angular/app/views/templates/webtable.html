@@ -70,10 +70,10 @@
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th style="width:2%">#</th>
+                    <th>#</th>
                     <th id="head-{{index}}" ng-repeat="element in config.fields" ng-dblclick="setSelectedColumn($index)"
                         ng-init="index=$index"
-                        ng-style="thWidth(index)">
+                        ng-style="cssThWidth(index)">
                         <div ng-if="index!=0">
                             <div id="hook-{{index}}" class="hook" ng-style="hookLeft(index)"
                                  draggable></div>
@@ -86,23 +86,24 @@
                 </tr>
                 </thead>
                 <tbody>
+                <tr class="fill"></tr>
                 <tr ng-show="show_query_record" class="success">
                     <td>{{'>'}}</td>
-                    <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index">
+                    <td ng-repeat="d in query_record track by $index" ng-init="innerindex=$index" ng-style="cssTrWidth(innerindex)">
                         <div webtable-cell-query></div>
                     </td>
                 </tr>
                 <tr ng-show="new_record" class="success">
                     <td>{{'>'}}</td>
-                    <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index">
+                    <td ng-repeat="d in new_record track by $index" ng-init="innerindex=$index" ng-style="cssTrWidth(innerindex)">
                         <div webtable-cell-new></div>
                     </td>
                 </tr>
                 <tr ng-repeat="(outerindex,data) in records |orderBy:selectedColumn:reverseSort"
                     ng-class="activeRecord(outerindex)"
-                        ng-hide="show_query_record">
+                        ng-hide="show_query_record" >
                     <td ng-click="setSelectedRecord(outerindex)">{{isSelectedRecord(outerindex)?'>':'-'}}</td>
-                    <td ng-repeat="d in data track by $index " ng-init="innerindex=$index">
+                    <td ng-repeat="d in data track by $index " ng-init="innerindex=$index" ng-style="cssTrWidth(innerindex)">
                         <div webtable-cell></div>
                     </td>
                 </tr>

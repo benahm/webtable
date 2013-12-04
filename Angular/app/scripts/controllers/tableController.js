@@ -128,9 +128,15 @@ angular.module("tableController", ["data", "configuration", "utils"])
             }
         }
 
-        $scope.thWidth = function (index) {
+        $scope.cssTrWidth = function (index) {
             return {width: config.fields[index].columnWidth + '%'}
         };
+
+        $scope.cssThWidth = function (index) {
+            var wtb_width = angular.element('#webtable-border').width();
+            var width= (config.fields[index].columnWidth*wtb_width)/wtb_width;
+            return {width: width + '%'}
+        }
 
         $scope.hookLeft = function (index) {
             var percent = 2;
@@ -139,15 +145,6 @@ angular.module("tableController", ["data", "configuration", "utils"])
             return {left: percent + '%'}
         };
 
-        $scope.normalize = function (index) {
-            var percent = 2;
-            for (var i = 0; i < index; i++)
-                percent += config.fields[i].columnWidth;
-            var webtableWidth = angular.element("#webtable").width();
-            angular.element("#hook-" + index).css({
-                left: utilsFactory.percentToPx(percent, webtableWidth)
-            })
-        };
 
         /**
          * on column resize
@@ -157,18 +154,7 @@ angular.module("tableController", ["data", "configuration", "utils"])
             config.fields[index].columnWidth -= move;
             config.fields[index - 1].columnWidth += move;
             checkMinColumnWidth(index);
-
-            //apply the width on the column index directly with css
-            angular.element("#head-" + index).css({
-                width: config.fields[index].columnWidth + '%'
-            })
-            //apply the width on the column index-1 directly with css
-            angular.element("#head-" + (index - 1)).css({
-                width: config.fields[index - 1].columnWidth + '%'
-            })
-
-            //?????
-            $scope.normalize(index);
+            $scope.$apply();
 
         })
 

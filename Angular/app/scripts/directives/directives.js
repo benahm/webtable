@@ -82,7 +82,11 @@ directivesModule.directive('doFocus', function ($timeout) {
             var funCheckBounds = function(evt) {
                 console.log("event fired: " + evt.type);
                 console.log(raw.scrollTop,raw.offsetHeight,raw.scrollHeight);
+                $("tr").css({
+                    top:raw.scrollTop
+                })
                 if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+
                     scope.$apply(attr.onScroll);
                 }
 
