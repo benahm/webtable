@@ -1,4 +1,6 @@
 webtable
 ========
 
-Description coming soon!
+Webtable inspired from Siebel List Applet
+
+* this project is no more updated
